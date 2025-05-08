@@ -92,7 +92,7 @@ tBST rightChild(tBST tree);
 	@param[in] tree Árbol no vacío.
 	@return Clave del nodo raíz.
 	@pre El árbol debe contener al menos un nodo.
- */
+*/
 tKey root(tBST tree);  
 
 /**
@@ -100,7 +100,7 @@ tKey root(tBST tree);
 	@param[in] tree Árbol a evaluar.
 	@retval true Si es NULLBST.
 	@retval false Si contiene al menos un nodo.
- */
+*/
 bool isEmptyTree(tBST tree);  
 
 /**
@@ -108,7 +108,7 @@ bool isEmptyTree(tBST tree);
 	@param[in] tree Árbol donde buscar.
 	@param[in] key Clave a localizar.
 	@return Subárbol cuya raíz contiene la clave, o NULLBST si no se encuentra.
- */
+*/
 tBST findKey(tBST tree, tKey key);  
   
 // Destructoras  
@@ -120,7 +120,7 @@ tBST findKey(tBST tree, tKey key);
 	@retval true Si se eliminó con éxito.
 	@retval false Si la clave no estaba en el árbol.
 	@post El árbol no contiene la clave eliminada.
- */ 
+*/ 
 bool removeKey(tKey key, tBST *tree);  
 ```
 
@@ -246,16 +246,16 @@ insertKey(&tree, 30);
 Árbol resultante:
 
 ```
-     20
-    /  \
-  10    30
+     20
+    /  \
+  10    30
 ```
 
 ### Búsqueda de clave
 
 ```c
 if (findKey(tree, 10)) {
-    printf("Clave encontrada!\n");
+    printf("Clave encontrada!\n");
 }
 ```
 
@@ -274,9 +274,9 @@ removeKey(10, &tree);
 Árbol resultante:
 
 ```
-     20
-       \
-        30
+     20
+       \
+        30
 ```
 
 ---
@@ -313,19 +313,19 @@ Cuando un ABB se desequilibra al insertar o eliminar, un árbol ***AVL** aplica 
 Antes:
 
 ```
-    30
-   /
-  20
- /
+    30
+   /
+  20
+ /
 10
 ```
 
 Después de rotación LL:
 
 ```
-    20
-   /  \
-  10   30
+    20
+   /  \
+  10  30
 ```
 
 ### Ejemplo de Rotación RR:
@@ -333,19 +333,19 @@ Después de rotación LL:
 Antes:
 
 ```
-  10
-    \
-     20
-       \
-        30
+  10
+    \
+     20
+       \
+        30
 ```
 
 Después de rotación RR:
 
 ```
-     20
-    /  \
-  10    30
+     20
+    /  \
+  10    30
 ``` 
 
 ---
@@ -368,10 +368,10 @@ removeKey(20, &tree);
 Árbol tras inserciones:
 
 ```
-      50
-     /  \
-   30    70
-  /
+      50
+     /  \
+   30    70
+  /
 20
 ```
 
@@ -380,9 +380,9 @@ removeKey(20, &tree);
 Árbol tras eliminar 20:
 
 ```
-      50
-     /  \
-   30    70
+      50
+     /  \
+   30    70
 ```
 
 ---
@@ -398,20 +398,20 @@ removeKey(30, &tree);
 Árbol antes:
 
 ```
-      50
-     /  \
-   30    70
-     \
-     25
+      50
+     /  \
+   30    70
+    \
+     25
 ```
 
 Árbol después:
 
 ```
 
-      50
-     /  \
-   25    70
+      50
+     /  \
+   25    70
 
 ```
 
@@ -429,21 +429,21 @@ removeKey(70, &tree); //tiene hijos 60 y 80
 Árbol antes:
 
 ```
-      50
-     /  \
-   25    70
-         / \
-       60   80
+      50
+     /  \
+   25    70
+         / \
+       60   80
 ```
 
 Árbol después (sucesor 80 reemplaza 70):
 
 ```
-      50
-     /  \
-   25    80
-         /
-       60
+      50
+     /  \
+   25    80
+         /
+       60
 ```
 
 ---
@@ -457,19 +457,19 @@ removeKey(50, &tree);
 Árbol antes:
 
 ```
-      50
-     /  \
-   25    80
-         /
-       60
+      50
+     /  \
+   25    80
+         /
+        60
 ```
 
 Árbol después (sucesor 60 reemplaza 50):
 
 ```
-      60
-     /  \
-   25    80
+      60
+     /  \
+   25    80
 ```
 
 ---
@@ -486,7 +486,7 @@ Insertamos a un árbol: 55, 23, 72, 45, 87, 35, 69, 58, 50, 48.
         45  69  87
        /  \
      35    50
-	      /
+          /
         48
 ```
 
@@ -500,7 +500,7 @@ Borramos 55:
         45  69  87
        /  \
      35    50
-	      /
+          /
         48
 ```
 - `55` tiene dos hijos.
