@@ -1,9 +1,9 @@
 ---
-title: Listas
+title: Listas Dinámicas
 tags:
-  - pro2
-  - listas
-  - estructuras
+  - Programación-2
+  - Tipos-de-datos
+  - Implementaciones
 date: 2025-05-08
 ---
 

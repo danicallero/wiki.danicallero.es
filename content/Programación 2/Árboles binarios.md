@@ -1,11 +1,10 @@
 ---
 title: Árboles binarios
 tags:
-  - pro2
-  - arboles
-  - estructuras
-  - especificaciones
-  - implementaciones
+  - Programación-2
+  - Tipos-de-datos
+  - Especificaciones
+  - Implementaciones
 date: 2025-05-08
 ---
 
