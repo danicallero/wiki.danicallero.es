@@ -233,42 +233,89 @@ export function renderPage(
   const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"
   const doc = (
     <html lang={lang}>
-      <Head {...componentData} />
-      <body data-slug={slug}>
-        <div id="quartz-root" class="page">
-          <Body {...componentData}>
-            {LeftComponent}
-            <div class="center">
-              <div class="page-header">
-                <Header {...componentData}>
-                  {header.map((HeaderComponent) => (
-                    <HeaderComponent {...componentData} />
-                  ))}
-                </Header>
-                <div class="popover-hint">
-                  {beforeBody.map((BodyComponent) => (
-                    <BodyComponent {...componentData} />
-                  ))}
-                </div>
-              </div>
-              <Content {...componentData} />
-              <hr />
-              <div class="page-footer">
-                {afterBody.map((BodyComponent) => (
-                  <BodyComponent {...componentData} />
-                ))}
-              </div>
+    <Head {...componentData} />
+    <body data-slug={slug}>
+    <DappledLight />
+    <div id="quartz-root" class="page">
+      <Body {...componentData}>
+        {LeftComponent}
+        <div class="center">
+          <div class="page-header">
+            <Header {...componentData}>
+              {header.map((HeaderComponent) => (
+                <HeaderComponent {...componentData} />
+              ))}
+            </Header>
+            <div class="popover-hint">
+              {slug !== "index" &&
+                beforeBody.map((BodyComponent) => <BodyComponent {...componentData} />)}
             </div>
-            {RightComponent}
-            <Footer {...componentData} />
-          </Body>
+          </div>
+          <Content {...componentData} />
+          <hr />
+          <div class="page-footer">
+            {afterBody.map((BodyComponent) => (
+              <BodyComponent {...componentData} />
+            ))}
+          </div>
         </div>
-      </body>
-      {pageResources.js
-        .filter((resource) => resource.loadTime === "afterDOMReady")
-        .map((res) => JSResourceToScriptElement(res))}
+        {RightComponent}
+        <Footer {...componentData} />
+      </Body>
+    </div>
+    </body>
+    {pageResources.js
+      .filter((resource) => resource.loadTime === "afterDOMReady")
+      .map((res) => JSResourceToScriptElement(res))}
     </html>
   )
 
   return "<!DOCTYPE html>\n" + render(doc)
+}
+
+function DappledLight() {
+  return (
+    <div id="dappled-light">
+      <div id="glow"></div>
+      <div id="glow-bounce"></div>
+      <div class="perspective">
+        <div id="leaves"></div>
+        <div id="blinds">
+          <div class="shutters">
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+          </div>
+          <div class="vertical">
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+      <div id="progressive-blur">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  )
 }
