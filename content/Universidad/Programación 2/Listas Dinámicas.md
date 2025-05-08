@@ -7,7 +7,7 @@ tags:
 date: 2025-05-08
 ---
 
-Una lista dinámica es un tipo de [[Lista]] que almacena elementos en espacios de memoria enlazados llamados **nodos**. Este tipo de lista es ideal para ==aplicaciones en las que el número de elementos es desconocido==, ya que su capacidad máxima de elementos es esencialmente ilimitada (dentro de las limitaciones de memoria de la máquina). Sin embargo, esta implementación no permite el acceso directo a elementos en posiciones arbitrarias. Para acceder a un elemento en mitad de la lista, es necesario atravesarla desde el principio o desde el final, si se trata de una *lista doblemente enlazada*. Por lo tanto, las operaciones como la *eliminación, el acceso al elemento previo o al último* son poco eficientes en las listas dinámicas y se manejan mejor en las *[[Listas Estáticas]].
+Una lista dinámica es un tipo de [[Lista]] que almacena elementos en espacios de memoria enlazados llamados **nodos**. Este tipo de lista es ideal para ==aplicaciones en las que el número de elementos es desconocido==, ya que su capacidad máxima de elementos es esencialmente ilimitada (dentro de las limitaciones de memoria de la máquina). Sin embargo, esta implementación no permite el acceso directo a elementos en posiciones arbitrarias. Para acceder a un elemento en mitad de la lista, es necesario atravesarla desde el principio o desde el final, si se trata de una *lista doblemente enlazada*. Por lo tanto, las operaciones como la *eliminación, el acceso al elemento previo o al último* son poco eficientes en las listas dinámicas y se manejan mejor en las *[[Listas Estáticas]]*.
 
 ---
 

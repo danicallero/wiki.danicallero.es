@@ -150,7 +150,7 @@ tPosL next(tPosL p, tList L);
 
 ## Comparativa de implementaciones
 
-| Implementación | Ventajas                              | Inconvenientes                                                                                                |
-| -------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| Estática       | Acceso directo, operaciones sencillas | Tamaño fijo, requiere más memoria inicial, y se corre el riesgo de no poder insertar elementos al estar llena |
-| Dinámica       | Memoria dinámica, ampliable           | No es posible el acceso directo, es necesario recorrer la lista para acceder a las diferentes posiciones.     |
+| Implementación | Ventajas                               | Inconvenientes                                                                                                                                       |
+| -------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Estática       | Acceso directo, operaciones sencillas. | Tamaño fijo, requiere más memoria inicial, y se corre el riesgo de no poder insertar elementos al estar llena.                                       |
+| Dinámica       | Memoria dinámica y ampliable.          | No es posible el acceso directo, es necesario recorrer la lista para acceder a las diferentes posiciones. Riesgo de fragmentación o fuga de memoria. |
