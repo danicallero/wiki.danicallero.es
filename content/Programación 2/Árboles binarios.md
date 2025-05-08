@@ -23,16 +23,16 @@ Un ***Árbol Binario de Búsqueda (ABB)*** es una estructura jerárquica que man
 
 ```c
 typedef struct tNodeBST {
-    tKey key;
-    struct tNodeBST *left;
-    struct tNodeBST *right;
+    tKey key;
+    struct tNodeBST *left;
+    struct tNodeBST *right;
 } *tBST;
 ```
 
 ```
-        [ key ]
-       /      \
-   [left]   [right]
+        [ key ]
+        /     \
+   [left]     [right]
 ```
 
 ---
