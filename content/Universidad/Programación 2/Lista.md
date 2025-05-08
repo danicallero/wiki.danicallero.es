@@ -1,9 +1,9 @@
 ---
-title: Listas Dinámicas
+title: Listas
 tags:
   - Programación-2
   - Tipos-de-datos
-  - Implementaciones
+  - Especificaciones
 date: 2025-05-08
 ---
 
@@ -18,33 +18,20 @@ Una ***Lista*** es una estructura de datos que almacena una secuencia de cero 
 [a1] -> [a2] -> [a3] -> ... -> [an]
 ```
 
-También existen **listas doblemente enlazadas**, donde cada nodo apunta tanto al siguiente como al anterior:
+## Tipos de implementación
+##### Según su uso de memoria:
+La implementación de un *TAD* lista depende de cómo se almacenen sus elementos en memoria, y existen ==dos== métodos principales para ello.
 
-```
-NULL <- [a1] <-> [a2] <-> [a3] -> NULL
-```
-
-Esto permite recorridos en ambos sentidos y facilita inserciones/eliminaciones en el medio.
+- [[Listas Estáticas]]: Se les asigna inicialmente un tamaño máximo que no se puede cambiar.
+- [[Listas Dinámicas]]: Tienen un tamaño variable y ocupan únicamente la cantidad de memoria necesaria para almacenar la información que contienen.
+##### Según el orden de sus elementos:
+Dependiendo de la aplicación de la lista, podemos distinguir entre **listas ordenadas** y **no ordenadas**. En las listas ordenadas, los elementos se almacenan en orden según un *criterio de ordenación* específico. En las listas no ordenadas, el usuario que interactúa con la interfaz del TAD decide la posición del elemento a insertar.
 
 ---
 
 ## Estructura de datos
 
-```c
-#include <stdbool.h>
-
-#define LNULL ... //posición nula
-typedef ... tItemL; //tipo de elemento
-typedef ... tPosL;  //tipo de posición
-typedef ... tList;  //tipo lista
-
-// Para lista doblemente enlazada:
-typedef struct tNode {
-    tItemL data;
-    struct tNode *next;
-    struct tNode *prev;
-} *tList;
-```
+La estructura de datos variará según se usen [[Listas Estáticas]] o [[Listas Dinámicas]].
 
 ---
 
@@ -163,8 +150,7 @@ tPosL next(tPosL p, tList L);
 
 ## Comparativa de implementaciones
 
-|Implementación|Ventajas|Inconvenientes|
-|---|---|---|
-|Estática|Acceso directo, operaciones sencillas|Tamaño fijo, requiere más memoria inicial|
-|Dinámica simple|Memoria dinámica, ampliable|No acceso directo, recorrido secuencial|
-|Dinámica doblemente enlazada|Acceso bidireccional, inserción/eliminación rápida|Más memoria por punteros adicionales|
+| Implementación | Ventajas                              | Inconvenientes                                                                                                |
+| -------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Estática       | Acceso directo, operaciones sencillas | Tamaño fijo, requiere más memoria inicial, y se corre el riesgo de no poder insertar elementos al estar llena |
+| Dinámica       | Memoria dinámica, ampliable           | No es posible el acceso directo, es necesario recorrer la lista para acceder a las diferentes posiciones.     |
