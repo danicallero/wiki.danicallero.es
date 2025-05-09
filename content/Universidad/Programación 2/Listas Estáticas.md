@@ -2,7 +2,6 @@
 title: Listas Estáticas
 tags:
   - Programación-2
-  - Tipos-de-datos
   - Implementaciones
 date: 2025-05-08
 ---

@@ -1,5 +1,5 @@
 ---
-title: Listas Dinámicas
+title: Pilas Dinámicas
 tags:
   - Programación-2
   - Implementaciones
