@@ -23,8 +23,11 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
+        header: {
+          name: "Droid Serif Display",
+          weights: [500],
+        },
+        body: "Roboto Slab",
         code: "Fira Code",
       },
       colors: {
@@ -32,9 +35,9 @@ const config: QuartzConfig = {
           light: "#e8f7f3",
           lightgray: "#d1e8e2",
           gray: "#a1b7b2",
-          darkgray: "#4a6160",
-          dark: "#2d4039",
-          secondary: "#6f9f97",
+          darkgray: "#647574",
+          dark: "#587066",
+          secondary: "#5b8370",
           tertiary: "#a0b9b6",
           highlight: "rgba(143, 159, 169, 0.15)",
           textHighlight: "#f1c6a6",
