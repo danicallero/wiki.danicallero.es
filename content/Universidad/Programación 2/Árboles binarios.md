@@ -39,7 +39,6 @@ typedef struct tNodeBST {
 ## Especificación:
 
 ```c
-#include <stdbool.h>  
 #define NULLBST NULL //Implementación dinámica  
   
 typedef int tKey; //Tipo clave del árbol  

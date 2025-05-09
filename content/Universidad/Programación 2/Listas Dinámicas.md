@@ -18,8 +18,6 @@ En una lista simplemente enlazada:
 ```
 
 ```c
-#include <stdbool.h>
-
 #define LNULL NULL  //posición nula
 typedef ... tItemL; //tipo de elemento
 typedef struct tNode *tPosL; //Se define tPosL como puntero a tNode.
