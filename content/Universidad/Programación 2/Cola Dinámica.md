@@ -4,6 +4,7 @@ tags:
   - Programación-2
   - Tipos-de-datos
   - Implementaciones
+  - Universidad
 date: 2025-05-08
 ---
 Una **cola dinámica** es una implementación del TAD [[Cola]] que almacena los elementos en una estructura enlazada mediante nodos en memoria dinámica. Esto permite que el tamaño de la cola crezca o disminuya según sea necesario, lo que la hace ideal para aplicaciones con cargas variables o indefinidas.
@@ -190,6 +191,3 @@ tItemQ front(tQueue Q) {
 | ---------------------------------------------- | --------------------------------------------------- |
 | Estructura simple (1 puntero)                  | Más difícil de depurar                              |
 | Ideal para colas circulares (juegos, procesos) | Requiere lógica especial para detectar estado vacío |
-
-
----

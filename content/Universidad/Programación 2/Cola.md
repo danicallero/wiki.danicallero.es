@@ -4,6 +4,7 @@ tags:
   - Programación-2
   - Tipos-de-datos
   - Especificaciones
+  - Universidad
 date: 2025-05-08
 ---
 
@@ -24,7 +25,7 @@ Una cola contiene una secuencia de elementos $a_{o}$,$a_{1}$,$a_{2}$,…,$a_{n}
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | **[[Cola Estática]]**  | Tamaño fijo. Uso de array. Más simple y rápida, pero con riesgo de overflow.                                                          |
 | **[[Cola Dinámica]]**  | Uso de nodos enlazados. Tamaño variable. Más flexible pero más compleja y lenta.                                                      |
-| **Cola con Prioridad** | Cada elemento tiene prioridad. Se atienden primero los de prioridad mayor. Internamente es una lista de colas por nivel de prioridad. |
+| [[Cola con Prioridad]] | Cada elemento tiene prioridad. Se atienden primero los de prioridad mayor. Internamente es una lista de colas por nivel de prioridad. |
 
 ---
 
@@ -91,6 +92,3 @@ tItemQ front(tQueue Q);
 - [[Cola Dinámica]]
 - [[Cola de Prioridad]]
 - [[Lista]] (de donde derivan muchas implementaciones de colas)
-
-
----

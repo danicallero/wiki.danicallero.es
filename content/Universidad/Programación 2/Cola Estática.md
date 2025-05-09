@@ -4,7 +4,10 @@ tags:
   - Programación-2
   - Tipos-de-datos
   - Implementaciones
+  - Universidad
 date: 2025-05-08
+aliases:
+  - Cola Estática
 ---
 Una **cola estática** es una implementación del TAD [[Cola]] que utiliza un array de tamaño fijo para almacenar sus elementos. Es ideal para ==situaciones donde se conoce de antemano el número máximo de elementos==, como simuladores, colas de impresión y gestión de recursos limitados.
 
@@ -139,5 +142,3 @@ tItemQ front(tQueue Q) {
 | -------- | --------------------- | ----------------------------------------- |
 | Lineal   | Simple de implementar | Espacio desperdiciado                     |
 | Circular | Reutiliza espacio     | Lógica de llenado y vacío menos intuitiva |
-
----

@@ -3,6 +3,7 @@ title: Listas Dinámicas
 tags:
   - Programación-2
   - Implementaciones
+  - Universidad
 date: 2025-05-08
 ---
 
