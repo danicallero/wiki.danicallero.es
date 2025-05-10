@@ -1,5 +1,5 @@
 ---
-title: Árboles Binarios de Búsqueda
+title: Árboles Autobalanceados
 tags:
   - Programación-2
   - Tipos-de-datos
@@ -7,7 +7,7 @@ tags:
   - Implementaciones
   - Universidad
 date: 2025-05-10
-aliases: []
+aliases:
 ---
 ## ¿Qué es un árbol AVL?
 
