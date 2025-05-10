@@ -4,6 +4,7 @@ tags:
   - Programación-2
   - Implementaciones
   - Universidad
+  - Tipos-de-datos
 date: 2025-05-08
 aliases:
   - lista estática
