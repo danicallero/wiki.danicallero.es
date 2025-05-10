@@ -218,6 +218,6 @@ Eliminar 70 → reemplazamos por mínimo subárbol derecho (80):
 ## Observaciones importantes de los apuntes
 
 -  Árbol AVL es un [[ABB]] con equilibrio automático.  
--  Mantiene **altura O(log n)** garantizada.  
+-  Mantiene **complejidad de búsqueda O(log n)**.  
 - Inserciones y eliminaciones más complejas por las rotaciones.  
 -  Búsqueda misma complejidad que ABB ideal.
