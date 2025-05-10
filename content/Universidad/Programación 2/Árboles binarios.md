@@ -48,7 +48,7 @@ Ejemplo:
 
 ## Tipos de árboles binarios
 
-### Árbol binario ==lleno== (full binary tree)
+### Árbol binario lleno (full binary tree)
 
 Un árbol binario lleno es aquel donde **todos los nodos internos tienen exactamente 2 hijos**.
 
@@ -62,7 +62,7 @@ Un árbol binario lleno es aquel donde **todos los nodos internos tienen exactam
 
 ---
 
-### Árbol binario ==completo== (complete binary tree)
+### Árbol binario completo (complete binary tree)
 
 Un árbol binario completo es aquel donde:
 
@@ -81,7 +81,7 @@ Faltan nodos en el último nivel pero están a la izquierda.
 
 ---
 
-### Árbol binario **perfecto** (perfect binary tree)
+### Árbol binario perfecto (perfect binary tree)
 
 Un árbol binario perfecto cumple:
 
@@ -202,4 +202,5 @@ nivel 3: D E
 | Altura (h)              | Longitud camino más largo a una hoja |
 | Nodos en árbol perfecto | 2^(h+1) - 1                          |
 | Hojas en árbol perfecto | 2^h                                  |
+ 
  Un árbol binario de altura **h** tiene como máximo **2^h** nodos en el último nivel.

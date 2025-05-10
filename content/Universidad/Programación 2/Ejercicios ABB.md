@@ -1,5 +1,5 @@
 ---
-title: Ejercicios ABB
+title: Ejercicios ABB y AVL
 tags:
   - Programación-2
   - Universidad
