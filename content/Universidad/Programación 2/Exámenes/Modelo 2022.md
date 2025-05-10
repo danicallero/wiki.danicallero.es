@@ -101,7 +101,32 @@ void corrects (int max, tPosL L) {
 q = L;
 ```
 
-3. `L` ya es un puntero, así que pasar `&L` (que es un `tPosL*`) cuando `corrects` espera un `tPosL`. Si bien es cierto que algunos compiladores permisivos de más pueden compilar el código de esta manera, la ejecución generará un error. Solución:
+3. `L` ya es un puntero, así que pasar `&L` (que es un `tPosL*`) cuando `corrects` espera un `tPosL` es incorrecto. Si bien es cierto que algunos compiladores permisivos de más pueden compilar el código de esta manera, la ejecución generará un error. Solución:
 ```c
 corrects(5, L); // <- MODIFICAR ESTA LÍNEA
 ```
+
+---
+# Ejercicio 4
+
+El tipo abstracto de datos (TAD) tBinTree sirve para representar árboles binarios de búsqueda de enteros positivos y para manipularlo solamente disponemos de la siguiente interfaz: (1,25 pts.)
+
+```c
+#define TNULL ...
+typedef unsigned int tItemT;
+typedef ... tBinTree;
+
+void createEmptyTree(tBinTree *T);
+bool buildTree(tBinTree LTree, tItemT d, tBinTree RTree, tBinTree *T);
+tBinTree leftChild(tBinTree T);
+tBinTree rightChild(tBinTree T);
+tBinTree root(tBinTree T);
+bool isEmptyTree(tBinTree T);
+```
+
+>[!note] Precondición común a leftChild, rightChild y root: árbol no vacío
+
+### A) (0,75 pts.)
+Se pide: 
+1. determinar qué OPERACIÓN hace la función WhatItDoes; 
+2. Aplícala al árbol de la figura y obtén su resultado

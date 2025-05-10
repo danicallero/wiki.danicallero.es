@@ -24,8 +24,10 @@ const config: QuartzConfig = {
       cdnCaching: true,
       typography: {
         header: {
-          name: "Droid Serif Display",
-          weights: [500],
+          //name: "DM Serif Display",
+          name: "Nunito ExtraBold",
+          //weights: [400],
+          weights: [800]
         },
         body: "Roboto Slab",
         code: "Fira Code",
@@ -92,7 +94,7 @@ const config: QuartzConfig = {
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
-      //Plugin.CustomOgImages(),
+      Plugin.CustomOgImages(),
     ],
   },
 }
