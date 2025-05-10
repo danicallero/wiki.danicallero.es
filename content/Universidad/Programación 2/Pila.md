@@ -6,6 +6,8 @@ tags:
   - Especificaciones
   - Universidad
 date: 2025-05-08
+aliases:
+  - pila
 ---
 
 ## 📌 Resumen del TAD Pila

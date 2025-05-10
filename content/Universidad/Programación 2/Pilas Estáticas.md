@@ -5,6 +5,8 @@ tags:
   - Implementaciones
   - Universidad
 date: 2025-05-08
+aliases:
+  - pila estática
 ---
 
 Una **pila estática** es un tipo de [[Pila]] que almacena elementos en un array con un tamaño fijo. Los elementos se añadirán, visualizarán y eliminarán siempre en la última posición *top*. Este tipo de pila es ideal por su sencillez. Sin embargo, no es óptimo en aplicaciones donde el tamaño de la muestra del elemento que se va a almacenar es desconocido o donde no se puede reservar espacio que no se utilizará; para estas aplicaciones véase *[[Pilas Dinámicas]]*.

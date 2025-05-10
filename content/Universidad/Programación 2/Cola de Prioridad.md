@@ -212,7 +212,7 @@ bool isEmptyQueueP(tQueueP queueP) {
 Una **cola de prioridad mixta** combina prioridades fijas (estáticas) con subcolas implementadas dinámicamente mediante listas enlazadas. Este enfoque es eficiente cuando el número de prioridades es conocido de antemano, pero se requiere flexibilidad en la cantidad de elementos por prioridad.
 
 ---
-# Estructura de datos (Mixta)
+## Estructura de datos (Mixta)
 
 ```c
 #define MAX_PRIORITIES 3
@@ -238,7 +238,7 @@ typedef struct {
 
 ---
 
-# Especificación del TAD Cola de Prioridad Mixta
+## Especificación del TAD Cola de Prioridad Mixta
 
 ```c
 void createEmptyQueueP(tQueueP *queueP);
@@ -250,7 +250,7 @@ bool isEmptyQueueP(tQueueP queueP);
 
 ---
 
-# Implementación
+## Implementación
 
 ```c
 void createEmptyQueueP(tQueueP *queueP) {
@@ -290,7 +290,7 @@ bool isEmptyQueueP(tQueueP queueP) {
 ```
 
 ---
-# Ventajas del enfoque mixto
+## Ventajas del enfoque mixto
 
 - Estructura simple y eficiente si las prioridades son fijas.
 - Evita recorrer listas para insertar nuevas prioridades.

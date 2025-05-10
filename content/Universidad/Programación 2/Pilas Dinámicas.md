@@ -5,6 +5,8 @@ tags:
   - Implementaciones
   - Universidad
 date: 2025-05-09
+aliases:
+  - pila dinámica
 ---
 
 Una **pila dinámica** es un tipo de [[Pila]] que almacena elementos en espacios de memoria enlazados llamados **nodos**. Los elementos se añadirán, visualizarán y eliminarán siempre en la última posición *top*. Este tipo de pila es ideal por su capacidad de almacenamiento variable, pues al no basarse en arrays, su tamaño puede crecer hasta los límites de memoria que permita la máquina en la que se ejecuta. Sin embargo, al igual que ocurre en las [[Listas Dinámicas]], este tipo de pila puede dar lugar a errores de segmentación si se maneja mal la memoria. Para aplicaciones en las que se conoce el valor máximo de elementos que se quiere almacenar, y la seguridad es importante, véase [[Pilas Estáticas]].

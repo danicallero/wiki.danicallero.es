@@ -6,6 +6,8 @@ tags:
   - Implementaciones
   - Universidad
 date: 2025-05-08
+aliases:
+  - cola dinámica
 ---
 Una **cola dinámica** es una implementación del TAD [[Cola]] que almacena los elementos en una estructura enlazada mediante nodos en memoria dinámica. Esto permite que el tamaño de la cola crezca o disminuya según sea necesario, lo que la hace ideal para aplicaciones con cargas variables o indefinidas.
 

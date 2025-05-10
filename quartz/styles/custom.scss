@@ -1,6 +1,4 @@
 @use "./base.scss";
-
-// put your custom CSS here!
 @use "./variables.scss" as *;
 
 body[data-slug="index"] img {
@@ -11,37 +9,7 @@ body[data-slug="index"] img {
 body {
   position: relative;
   min-height: 100vh;
-
-  // only allow synthesizing italics but not bold
-  font-synthesis: style;
-}
-
-img[src*="banner.svg"] {
-  opacity: 0.8;
-}
-
-[saved-theme="dark"] body[data-slug="index"] img[src*="banner.svg"] {
-  filter: invert(100%);
-}
-
-body[data-slug="thoughts/craft"] {
-  & li:has(> img, > video) {
-    list-style-type: none;
-
-    & > img,
-    & > video {
-      margin: 1rem 0;
-    }
-  }
-
-  article > ul {
-    padding-left: 0;
-
-    & > li {
-      list-style-type: none;
-      margin: 1rem 0;
-    }
-  }
+  font-synthesis: style; // only allow synthesizing italics but not bold
 }
 
 hr {
@@ -61,11 +29,6 @@ hr {
     padding: 0.5em 1em;
     color: var(--gray);
   }
-}
-
-.meta,
-.content-meta {
-  font-family: biro_script_standardRgus, var(--bodyFont);
 }
 
 #quartz-root {
@@ -92,12 +55,11 @@ body.animation-ready #quartz-body {
   }
 }
 
-// hack to duplicate the fade-in animation so that we reset the animation in both directions
+// duplicate fade animation for reset
 @keyframes fade {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
@@ -107,13 +69,11 @@ body.animation-ready #quartz-body {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
 }
 
-// dappled light
 // dappled light
 #dappled-light {
   animation-duration: 0s;
@@ -143,13 +103,14 @@ body.animation-ready #quartz-body {
   }
 
   [saved-theme="dark"] body.animation-ready & {
-    animation-duration: .5s;
+    animation-duration: 1.5s;
     animation-name: sunset;
   }
 
   [saved-theme="dark"] & {
     --shadow: #374039;
-    --bounce-light: rgba(255, 255, 255, 0.15);
+    //--bounce-light: rgba(255, 255, 255, 0.15);
+    --bounce-light: rgba(255, 200, 150, 0.15);
   }
 
   & > #progressive-blur {
@@ -186,7 +147,8 @@ body.animation-ready #quartz-body {
 
   #glow {
     position: absolute;
-    background: linear-gradient(309deg, rgba(143, 159, 169, 0.15), rgba(143, 159, 169, 0.15) 20%, transparent);
+    //background: linear-gradient(309deg, rgba(143, 159, 169, 0.15), rgba(143, 159, 169, 0.15) 20%, transparent);
+    background: linear-gradient(309deg, rgba(180, 150, 120, 0.15), rgba(180, 150, 120, 0.15) 20%, transparent);
     transition: background 1s var(--timing-fn);
     height: 100%;
     width: 100%;
@@ -196,7 +158,8 @@ body.animation-ready #quartz-body {
   #glow-bounce {
     content: "";
     position: absolute;
-    background: linear-gradient(355deg, rgba(143, 159, 169, 0.15) 0%, transparent 30%, transparent 100%);
+    background: linear-gradient(355deg, rgba(180, 150, 120, 0.15) 0%, transparent 30%, transparent 100%);
+    //background: linear-gradient(355deg, rgba(143, 159, 169, 0.15) 0%, transparent 30%, transparent 100%);
     transition: background 1s var(--timing-fn);
     opacity: 0.5;
     height: 100%;
@@ -272,20 +235,16 @@ body.animation-ready #quartz-body {
   }
 }
 
-
 @keyframes sunrise {
   0% {
     background-color: var(--night);
   }
-
   10% {
     background-color: var(--dawn);
   }
-
   35% {
     background-color: var(--morning);
   }
-
   100% {
     background-color: var(--day);
   }
@@ -295,19 +254,15 @@ body.animation-ready #quartz-body {
   0% {
     background-color: var(--day);
   }
-
   30% {
     background-color: var(--evening);
   }
-
   60% {
     background-color: var(--dusk);
   }
-
   90% {
     background-color: var(--dawn);
   }
-
   100% {
     background-color: var(--night);
   }
@@ -317,19 +272,15 @@ body.animation-ready #quartz-body {
   0% {
     transform: rotateX(0deg) rotateY(0deg) scale(1);
   }
-
   18% {
     transform: rotateX(1deg) rotateY(2deg) scale(1.03);
   }
-
   32% {
     transform: rotateX(-4deg) rotateY(-2deg) scale(0.96);
   }
-
   66% {
     transform: rotateX(3deg) rotateY(-1deg) scale(1.04);
   }
-
   100% {
     transform: rotateX(0deg) rotateY(0deg) scale(1);
   }

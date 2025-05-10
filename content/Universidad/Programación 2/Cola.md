@@ -6,6 +6,8 @@ tags:
   - Especificaciones
   - Universidad
 date: 2025-05-08
+aliases:
+  - cola
 ---
 
 ---
@@ -83,6 +85,7 @@ tItemQ front(tQueue Q);
 - Todas las colas cumplen el comportamiento FIFO, excepto cuando se introduce una política de prioridad.
 - En colas estáticas, se debe comprobar que hay espacio antes de insertar.
 - En colas dinámicas, se debe gestionar memoria correctamente para evitar fugas.
+- Existe una variación del TAD cola que se comporta de forma circular. Su implementación se encuentra detallada en la implementación de la [[Cola Dinámica|cola dinámica]]
 
 ---
 
