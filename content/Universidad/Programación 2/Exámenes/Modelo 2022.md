@@ -37,7 +37,7 @@ Verdadero/Falso: (1 pto.)
 
 >En una implementación dinámica de las listas es imposible tener acceso eficiente al último elemento de la lista.
 
-**Falso**. Existen muchas formas de implementar una [[Listas Dinámicas|lista dinámica]]; si bien es cierto que en clase tan solo se trabajó con una implementación en la que el tipo `tList` es equivalente a `tPosL`, también podríamos tipificar `tList` como un `struct` que contiene punteros `tPosL` al nodo inicio (`head`) y al nodo final (`tail`). En este modelo de lista, el acceso al último elemento es igual de eficiente que el acceso al primero $O^1$, yes incluso más eficiente que acceder a un nodo intermedio.
+**Falso**. Existen muchas formas de implementar una [[Listas Dinámicas|lista dinámica]]; si bien es cierto que en clase tan solo se trabajó con una implementación en la que el tipo `tList` es equivalente a `tPosL`, también podríamos tipificar `tList` como un `struct` que contiene punteros `tPosL` al nodo inicio (`head`) y al nodo final (`tail`). En este modelo de lista, el acceso al último elemento es igual de eficiente que el acceso al primero $O(1)$, y es incluso más eficiente que acceder a un nodo intermedio.
 
 >En una pila los elementos se extraen en orden inverso al de entrada.
 
@@ -130,3 +130,142 @@ bool isEmptyTree(tBinTree T);
 Se pide: 
 1. determinar qué OPERACIÓN hace la función WhatItDoes; 
 2. Aplícala al árbol de la figura y obtén su resultado
+```c
+int WhatItDoes(tBinTree A){
+    if (isEmptyTree(A))
+        return 0;
+    else if (root(A)%2!=0)
+        return(WhatItDoes(leftChild(A)) + WhatItDoes(rightChild(A)));
+    else
+        return(root(A) + WhatItDoes(leftChild(A)) + WhatItDoes(rightChild(A)));
+}
+```
+
+La función `WhatItDoes` implementa de forma recursiva una operación de suma de aquellas claves que son un número par. Esto lo sabemos porque:
+```c
+else if (root(A)%2!=0) // <-ESTO SE CUMPLE CUANDO ROOT(A) ES IMPAR
+```
+En el caso de un nodo impar, no lo suma; continúa el recorrido por sus hijo izquierdo y derecho. En el caso de un nodo par, seguirá atravesando el árbol, pero sumará el valor del nodo a la cadena recursiva. El recorrido finaliza cuando se alcanza un nodo vacío (`isEmptyTree(A)`), en cuyo caso se devuelve 0.
+
+Figura:
+```
+      20
+    /    \
+  14      35
+ /  \    /  \
+1   18  24   40
+ \       \
+  6      30
+```
+
+Ejecutar la operación en esta figura devolverá:
+20+14+6+18+24+30+40 = `152`
+
+### B) (0,5 pts.)
+
+>[!question] Identificar qué tipo de recorrido nos permitiría mostrar las claves del árbol de la figura en este orden: 20-14-1-6-18-35-24-30-40.
+
+El tipo de recorrido es el [preorden](Universidad\Programación-2/Árboles-binarios#preorden).
+
+Aplicando el siguiente seudocódigo al mismo árbol, ¿cuál sería la secuencia de claves?
+
+```c
+Procedimiento recorrido(tBinTree)
+Inicio
+	si no es árbol vacío (tBinTree) entonces
+		recorrido(hijo izquierdo (tBinTree))
+		recorrido(hijo derecho (tBinTree))
+		imprime(raíz (tBinTree))
+Fin
+```
+
+El recorrido que se hará con el pseudocódigo es el del [posorden](Universidad\Programación-2/Árboles-binarios#posorden). Que recorrerá el árbol según la secuencia: 6 - 1 - 18 - 14 - 30 - 24 - 40 - 35 - 20.
+
+>[!question] Suponiendo que el árbol de la figura es AVL, elimina la clave 20, y muestra el árbol resultado identificando cualquier transformación necesaria y explicándola paso a paso.
+
+- Paso 1: Encontrar el **mayor de los menores** (predecesor inorden)
+```
+   14
+  /  \
+ 1   18
+  \
+   6
+```
+En este caso el mayor será el 18.
+- Paso 2: sustituimos el **20 por el 18** para eliminarlo como hoja
+```
+      18
+    /    \
+  14      35
+ /       /  \
+1       24   40
+ \       \
+  6       30
+```
+- Paso 3: Cálculo de alturas y factores de balance antes de rotar
+  1. Nodo 6
+     - Altura = 0 (hoja)
+     - FB(6) = altura(izq) – altura(der) = 0 – 0 = **0**
+
+  2. Nodo 1 
+     - Hijos: izq = NULL (altura –1), der = 6 (altura 0)
+     - Altura(1) = max(–1, 0) + 1 = 1
+     - FB(1) = –1 – 0 = **–1**
+    >[!note] max(–1, 0) es porque la altura de un nodo es 1+la mayor de las alturas de sus subárboles. -1 es porque si no tiene subárbol dcho o izquierdo, la altura de dicha rama es -1.
+
+  3. Nodo 14
+     - Hijos: izq = 1 (altura 1), der = NULL (altura –1)
+     - Altura(14) = max(1, –1) + 1 = 2
+     - FB(14) = 1 – (–1) = **+2** -> **desbalance LR**
+            
+- Paso 4: Rotación doble Izquierda-Derecha (LR)
+    4.1. Rotación izquierda en 1
+    ```
+    1               6
+     \     ->      /
+      6           1
+    ```
+    
+    4.2. Rotación derecha en 14
+    ```
+        14           6
+       /   ->      /   \
+      6           1    14
+     /
+    1
+    ```
+    
+- Paso 5: Árbol final balanceado
+    ```
+          18
+        /    \
+       6      35
+      / \    /  \
+     1  14  24   40
+             \
+              30
+    ```
+    
+- Paso 6: Verificación de factores de balance tras rotar
+    
+    1. Nodo 1: FB = 0 – 0 = **0**
+    2. Nodo 14: FB = 0 – 0 = **0** 
+    3. Nodo 6:
+        - Hijos: 1 (0), 14 (0) -> altura = 1
+        - FB(6) = 0 – 0 = **0** 
+
+    4. Nodo 30: FB = 0 – 0 = **0**
+    5. Nodo 24:
+        - Hijos: NULL (–1), 30 (0) -> altura = 1
+        - FB(24) = –1 – 0 = **–1**
+            
+    6. Nodo 40: FB = 0 – 0 = **0**
+    7. Nodo 35:
+        - Hijos: 24 (1), 40 (0) -> altura = 2 
+        - FB(35) = 1 – 0 = **+1**
+            
+    8. Nodo 18:
+        - Hijos: 6 (1), 35 (2) -> altura = 3
+        - FB(18) = 1 – 2 = **–1**
+            
+>[!success] Todos los factores de balance quedan en el rango $[–1, +1]$, por lo que el árbol está correctamente balanceado.
