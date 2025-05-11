@@ -353,7 +353,7 @@ void dequeue(tQueue *Q) {
 
 >[!todo] Se pide implementar la operación:
 >```applyPromo (tUserList) —> tUserList```
->Para que lleve a cabo el proceso descrito. El manejo de todos los TADs implicados se hará utilizando **EXCLUSIVAMENTE** los tipos y las operaciones de las interfaces mostrados en los [ANEXOS](images\plate_stack.jpeg)
+>Para que lleve a cabo el proceso descrito. El manejo de todos los TADs implicados se hará utilizando **EXCLUSIVAMENTE** los tipos y las operaciones de las interfaces mostrados en los [ANEXOS](/Universidad/Programación-2/Exámenes/Modelo-2022#anexo-i--lista-de-usuarios-tuserlist)
 
 ```c
 //Auxiliar para contar los elementos de la lista vídeos:
