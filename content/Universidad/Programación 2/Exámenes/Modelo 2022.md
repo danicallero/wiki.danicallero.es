@@ -4,23 +4,23 @@ tags:
   - Programación-2
   - Universidad
   - Exámenes
-date: 2025-05-09
+date: 2025-05-11
 draft: false
 ---
 ---
 # Ejercicio 1
 
-Dados los siguientes supuestos prácticos decidir: (1) cuál es la MEJOR estructura de datos, y (2) su MEJOR implementación para resolver el problema (para ser considerada correcta, AMBAS respuestas deberán estar justificadas): (1,5 pts.)
+**Dados los siguientes supuestos prácticos decidir: (1) cuál es la MEJOR estructura de datos, y (2) su MEJOR implementación para resolver el problema (para ser considerada correcta, AMBAS respuestas deberán estar justificadas): (1,5 pts.)**
 
->[!note] En el Servicio de Salud están recibiendo continuamente nuevas dosis de vacunas. Para evitar que caduquen es imprescindible que se usen primero las vacunas que han sido recibidas hace más tiempo. ¿Qué estructura de datos deberemos utilizar para gestionar el almacenamiento de las dosis?
+>[!abstract] En el Servicio de Salud están recibiendo continuamente nuevas dosis de vacunas. Para evitar que caduquen es imprescindible que se usen primero las vacunas que han sido recibidas hace más tiempo. ¿Qué estructura de datos deberemos utilizar para gestionar el almacenamiento de las dosis?
 
 En este caso se debe utilizar una [[cola dinámica]], pues por su estructura FIFO (*First In, First Out*), los elementos con los datos de las dosis se recuperarán por orden de llegada. Como desconocemos la cantidad de dosis que van a llegar, se implementará de forma **Dinámica**.
 
->[!note] El Servicio de Salud desea enviar una carta al domicilio y un SMS al móvil de cada paciente a los que se va a administrar la vacuna para recordarle el lugar y la hora en que debe presentarse ¿Qué estructura de datos deberemos utilizar para que podamos recuperar rápidamente esta información a partir del número de la tarjeta sanitaria?
+>[!abstract] El Servicio de Salud desea enviar una carta al domicilio y un SMS al móvil de cada paciente a los que se va a administrar la vacuna para recordarle el lugar y la hora en que debe presentarse ¿Qué estructura de datos deberemos utilizar para que podamos recuperar rápidamente esta información a partir del número de la tarjeta sanitaria?
 
 En este caso utilizaremos un [árbol AVL](Universidad/Programación-2/árboles-binarios#rotaciones-en-avl-para-mantener-equilibrio). Necesitamos acceder rápidamente a la información del paciente (domicilio, móvil, lugar y hora) a partir de una **clave única** (número de tarjeta sanitaria). El ==árbol AVL== es una estructura que mantiene el árbol equilibrado, garantizando búsquedas en **O(log n)** incluso en el peor caso. La implementación será **dinámica**, ya que necesitamos que el numero de pacientes pueda crecer conforme lleguen nuevos datos.
 
->[!note] Para garantizar la distancia interpersonal durante los exámenes, la Facultad ha asignado varias aulas al examen de cada asignatura. Cada aula tiene una capacidad máxima y los estudiantes elegirán en una web el aula en la que van a hacer el examen (de entre aquellas en las que queden sitios libres). Antes de un examen queremos obtener el listado de los estudiantes, ordenado alfabéticamente por nombre, que se han asignado a cada aula. ¿Qué estructura de datos deberemos utilizar para gestionar este listado?
+>[!abstract] Para garantizar la distancia interpersonal durante los exámenes, la Facultad ha asignado varias aulas al examen de cada asignatura. Cada aula tiene una capacidad máxima y los estudiantes elegirán en una web el aula en la que van a hacer el examen (de entre aquellas en las que queden sitios libres). Antes de un examen queremos obtener el listado de los estudiantes, ordenado alfabéticamente por nombre, que se han asignado a cada aula. ¿Qué estructura de datos deberemos utilizar para gestionar este listado?
 
 En este caso utilizaremos *multilistas*. Una [[Listas Estáticas|lista estática]] inicial será la responsable de guardar la información correspondiente a cada una de las aulas; es estática porque las clases con las que contamos es una constante que conocemos antes de empezar a distribuir al alumnado. De cada elemento `clase` colgará otra [[Listas Estáticas|lista estática]] ordenada alfabéticamente, que guardará el listado de alumnos por aula; es estática porque debemos llenar la lista solo cuando quedan sitios libres.
 
@@ -29,28 +29,28 @@ En este caso utilizaremos *multilistas*. Una [[Listas Estáticas|lista estática
 ---
 # Ejercicio 2 
 
-Verdadero/Falso: (1 pto.)
+**Verdadero/Falso: (1 pto.)**
 
->En el TAD Cola los elementos se organizan de forma circular.
+>[!abstract] En el TAD Cola los elementos se organizan de forma circular.
 
 **Falso**. Si bien es cierto que existen las implementaciones circulares de una [[cola]], esto no implica que todas las colas lo sean por definición. Las colas circulares se tratan, pues, de una solución particular.
 
->En una implementación dinámica de las listas es imposible tener acceso eficiente al último elemento de la lista.
+>[!abstract] En una implementación dinámica de las listas es imposible tener acceso eficiente al último elemento de la lista.
 
 **Falso**. Existen muchas formas de implementar una [[Listas Dinámicas|lista dinámica]]; si bien es cierto que en clase tan solo se trabajó con una implementación en la que el tipo `tList` es equivalente a `tPosL`, también podríamos tipificar `tList` como un `struct` que contiene punteros `tPosL` al nodo inicio (`head`) y al nodo final (`tail`). En este modelo de lista, el acceso al último elemento es igual de eficiente que el acceso al primero $O(1)$, y es incluso más eficiente que acceder a un nodo intermedio.
 
->En una pila los elementos se extraen en orden inverso al de entrada.
+>[!abstract] En una pila los elementos se extraen en orden inverso al de entrada.
 
 **Verdadero**. Un TAD [[Pila|pila]] tiene una estructura **LIFO** (*Last In, First Out*), que por definición extrae primero al último elemento que se almacena en ella. 
 
-> Los árboles completos son árboles binarios de búsqueda equilibrados.
+>[!abstract] Los árboles completos son árboles binarios de búsqueda equilibrados.
 
 **Verdadero**. Por la definición vista en clase, un [árbol completo](Universidad\Programación-2/Árboles-binarios#árbol-binario-completo-complete-binary-tree) es aquel que tiene todos sus niveles hasta h-1 llenos totalmente. Esto quiere decir que todos los nodos en niveles hasta h-1 tienen un [factor de equilibrio](Universidad\Programación-2\AVL#factor-de-equilibrio) $\in [-1,1]$.
 
 ---
 # Ejercicio 3
 
-En el siguiente código hay tres errores. Identifica cada uno de ellos, indica por qué se trata de un error y propón el correspondiente código corregido (basta con reescribir la parte del código afectada). (0,75 pts.)
+**En el siguiente código hay tres errores. Identifica cada uno de ellos, indica por qué se trata de un error y propón el correspondiente código corregido (basta con reescribir la parte del código afectada). (0,75 pts.)**
 
 ```c
 #include <stdio.h>
@@ -109,7 +109,7 @@ corrects(5, L); // <- MODIFICAR ESTA LÍNEA
 ---
 # Ejercicio 4
 
-El tipo abstracto de datos (TAD) tBinTree sirve para representar árboles binarios de búsqueda de enteros positivos y para manipularlo solamente disponemos de la siguiente interfaz: (1,25 pts.)
+**El tipo abstracto de datos (TAD) tBinTree sirve para representar árboles binarios de búsqueda de enteros positivos y para manipularlo solamente disponemos de la siguiente interfaz: (1,25 pts.)**
 
 ```c
 #define TNULL ...
@@ -127,9 +127,9 @@ bool isEmptyTree(tBinTree T);
 >[!note] Precondición común a leftChild, rightChild y root: árbol no vacío
 
 ### A) (0,75 pts.)
-Se pide: 
-1. determinar qué OPERACIÓN hace la función WhatItDoes; 
-2. Aplícala al árbol de la figura y obtén su resultado
+>[!abstract] Se pide:
+> 1. **Determinar qué OPERACIÓN hace la función WhatItDoes.**
+> 2. **Aplícala al árbol de la figura y obtén su resultado.**
 ```c
 int WhatItDoes(tBinTree A){
     if (isEmptyTree(A))
@@ -163,7 +163,7 @@ Ejecutar la operación en esta figura devolverá:
 
 ### B) (0,5 pts.)
 
->[!question] Identificar qué tipo de recorrido nos permitiría mostrar las claves del árbol de la figura en este orden: 20-14-1-6-18-35-24-30-40.
+>[!abstract] Identificar qué tipo de recorrido nos permitiría mostrar las claves del árbol de la figura en este orden: 20-14-1-6-18-35-24-30-40.
 
 El tipo de recorrido es el [preorden](Universidad\Programación-2/Árboles-binarios#preorden).
 
@@ -269,3 +269,199 @@ En este caso el mayor será el 18.
         - FB(18) = 1 – 2 = **–1**
             
 >[!success] Todos los factores de balance quedan en el rango $[–1, +1]$, por lo que el árbol está correctamente balanceado.
+
+# Ejercicio 5
+
+> [!tldr] En la práctica 2 se implementó un sistema para gestionar la plataforma VIMFIC de vídeo bajo demanda. El sistema emplea dos estructuras de datos (UserList y VideoList) para almacenar conjuntamente toda la información asociada, respectivamente, a usuarios y reproducciones. tal y como se representa en la siguiente figura: Partiendo del mismo problema, en este ejercicio se proponen una serie de modificaciones.
+
+![[Estructura_modelo_P2_2022.png]]
+## A) (3 pts.)
+
+>[!abstract] Cuando se ponga el sistema en explotación en un entorno real, leer las peticiones de los usuarios desde un fichero dejará de ser viable. En su lugar, se utilizará un TAD Cola (RequestQueue) para almacenar y gestionar dichas peticiones. En concreto, se ha decidido emplear una implementación de cola estática circular de 100 posiciones. Se pide, en primer lugar, realizar la nueva definición de tipos de datos de la cola:
+
+| MAX_PAR_LENGTH | constante para representar la máxima longitud (32) de las cadenas de caracteres de los parámetros de las peticiones                                                                                                                                                     |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tQueue         | representa una cola de peticiones                                                                                                                                                                                                                                       |
+| tCode          | tipo de la petición recibida (`char`)                                                                                                                                                                                                                                   |
+| tItemQ         | datos de un elemento de la cola (una petición), compuesto por:<br>`code`: de tipo `tCode`, representa la clase de la petición<br>`parameter1`: de tipo cadena de caracteres<br>`parameter2`: de tipo cadena de caracteres<br>`parameter3`: de tipo cadena de caracteres |
+| tPosQ          | posición de un elemento de la cola                                                                                                                                                                                                                                      |
+| NULLQ          | constante para representar posiciones nulas en la cola                                                                                                                                                                                                                  |
+>[!abstract] Además, partiendo de la nueva definición de tipos de datos, se pide realizar la implementación de las siguientes operaciones:
+
+```c
+isEmptyQueue (tQueue) -> bool
+//Determina si la cola está vacía.
+
+enqueue (tItemQ, tQueue) -> tQueue, bool
+//Inserta un nuevo elemento (tItemQ) en la cola. Devuelve falso si no hay memoria suficiente para realizar la operación.
+
+dequeue (tQueue) -> tQueue
+//Elimina el elemento que está en el frente de la cola. PreCD: la cola no está vacía.
+```
+
+La implementación general de la cola estática circular está [aquí](/Universidad/Programación-2/Cola-Estática#cola-estática-circular). Implementamos la solución particular:
+
+### Especificación:
+```c
+#define QMAX 100
+#define NULLQ -1
+ 
+typedef struct {
+	tCode code;
+	char parameter1[MAX_PAR_LENGTH];
+	char parameter2[MAX_PAR_LENGTH];
+	char parameter3[MAX_PAR_LENGTH];
+} tItemQ;
+
+typedef int tPosQ; //es una cola estática!!!
+ 
+typedef struct {
+    tItemQ data[QMAX];
+    tPosQ front;
+    tPosQ rear;
+} tQueue;
+```
+
+### Implementación:
+```c
+tPosQ addOne(tPosQ i) {
+    return (i + 1) % QMAX; //si se produce overflow vuelve al inicio
+}
+
+bool isEmptyQueue(tQueue Q) {
+    return Q.front == addOne(Q.rear);
+}
+
+bool enqueue(tItemQ item, tQueue *Q) {
+    if (Q->front == addOne(addOne(Q->rear))) return false;
+    Q->rear = addOne(Q->rear);
+    Q->data[Q->rear] = item;
+    return true;
+}
+
+void dequeue(tQueue *Q) {
+    Q->front = addOne(Q->front);
+}
+```
+
+## B) (2,5 pts.)
+
+>[!abstract] Implementación de una función:
+>Los propietarios de la plataforma VIMFIC quieren lanzar una promoción para fidelizar a los mejores clientes de categoría standard. Para ello, se pondrá a valor 0 el contador totalPlayTime de aquellos que cumplan dos condiciones:
+>1. Que tengan entre 0 y 30 minutos menos de _totalPlayTime_ que el cliente _standard_ que más tiempo de reproducción tenga.
+>2. Que, además, hayan visualizado más de 10 vídeos
+
+>[!todo] Se pide implementar la operación:
+>```applyPromo (tUserList) —> tUserList```
+>Para que lleve a cabo el proceso descrito. El manejo de todos los TADs implicados se hará utilizando **EXCLUSIVAMENTE** los tipos y las operaciones de las interfaces mostrados en los [ANEXOS](images\plate_stack.jpeg)
+
+```c
+//Auxiliar para contar los elementos de la lista vídeos:
+int countVideos(tVideoList list){
+	int counter = 0; //contador
+	tVideoPos q;
+	if (!isEmptyListV(list)){
+		q = firstV(list);
+		while(q != NULL_VIDEO){ //se repite hasta llegar al final
+			counter++;
+			q = nextV(q, list) //avanzamos al sig.
+		}
+	}
+	return counter;
+}
+```
+
+```c
+void applyPromo(tUserList *list) { //pasamos por ref. porque debemos cambiar valores
+    tUserPos pos;
+    int maxPlayTime = -1;
+
+    // 1. Encontrar el totalPlayTime máximo entre los usuarios estándar
+    pos = first(*list);
+    while (pos != NULL_USER) {
+        tUserItem user = getItem(pos, *list);
+        if (user.userCategory == standard && user.totalPlayTime > maxPlayTime) {
+            maxPlayTime = user.totalPlayTime;
+        }
+        pos = next(pos, *list);
+    }
+
+    // 2. Aplicar la promoción a los usuarios estándar que cumplan ambas condiciones
+    pos = first(*list);
+    while (pos != NULL_USER) {
+        tUserItem user = getItem(pos, *list);
+        int videoCount = countVideos(user.videoList);
+
+        if (user.userCategory == standard &&
+            user.totalPlayTime >= maxPlayTime - 30 &&
+            user.totalPlayTime < maxPlayTime && // estrictamente menos que el máximo
+            videoCount > 10) {
+
+            user.totalPlayTime = 0;
+            updateItem(user, pos, list);
+        }
+
+        pos = next(pos, *list);
+    }
+}
+```
+
+>[!warning] ¡Ojo!
+>user.totalPlayTime < maxPlayTime es estrictamente menos que el mayor usuario siguiendo textualmente el enunciado: "entre 0 y 30 minutos **menos** de _totalPlayTime_"
+
+### Anexo I – Lista de Usuarios (`tUserList`)
+
+#### Tipos de datos
+
+| Nombre            | Tipo                       | Descripción                                   |
+| ----------------- | -------------------------- | --------------------------------------------- |
+| `tUserList`       | ADT                        | Lista ordenada de usuarios por nick           |
+| `tUserCategory`   | `enum {standard, premium}` | Categoría del usuario                         |
+| `tUserItem`       | `struct`                   | Datos del usuario                             |
+| ├ `nickname`      | `string`                   | Nombre del usuario                            |
+| ├ `totalPlayTime` | `int`                      | Tiempo total de reproducción                  |
+| ├ `userCategory`  | `tUserCategory`            | Categoría del usuario                         |
+| └ `videoList`     | `tVideoList`               | Lista de vídeos del usuario                   |
+| `tUserPos`        | posición                   | Posición de un elemento en `tUserList`        |
+| `NULL_USER`       | constante                  | Constante usada para indicar posiciones nulas |
+#### Operaciones
+
+>[!note] Nota
+>Precondición común (salvo `createEmptyList`): la lista debe estar inicializada.
+
+| Operación                                    | Retorno     | Descripción                                                           |
+| -------------------------------------------- | ----------- | --------------------------------------------------------------------- |
+| `createEmptyList(tUserList)`                 | `tUserList` | Crea una lista vacía. PostCD: Lista inicializada y sin elementos.     |
+| `isEmptyList(tUserList)`                     | `bool`      | Determina si la lista está vacía.                                     |
+| `first(tUserList)`                           | `tUserPos`  | Devuelve la posición del primer elemento. PreCD: lista no vacía.      |
+| `last(tUserList)`                            | `tUserPos`  | Devuelve la posición del último elemento. PreCD: lista no vacía.      |
+| `next(tUserPos, tUserList)`                  | `tUserPos`  | Devuelve la posición siguiente o `NULL_USER`. PreCD: posición válida. |
+| `previous(tUserPos, tUserList)`              | `tUserPos`  | Devuelve la posición anterior o `NULL_USER`. PreCD: posición válida.  |
+| `getItem(tUserPos, tUserList)`               | `tUserItem` | Devuelve el contenido del elemento. PreCD: posición válida.           |
+| `updateItem(tUserItem, tUserPos, tUserList)` | `tUserList` | Modifica el contenido del elemento. PreCD: posición válida.           |
+
+### Anexo II – Lista de Vídeos (`tVideoList`)
+#### Tipos de Datos
+|Nombre|Tipo|Descripción|
+|---|---|---|
+|`tVideoList`|ADT|Lista no ordenada de vídeos|
+|`tVideoItem`|`struct`|Datos del vídeo|
+|├ `titleVideo`|`string`|Título del vídeo|
+|└ `playTime`|`int`|Tiempo de reproducción|
+|`tVideoPos`|posición|Posición en la lista de vídeos|
+|`NULL_VIDEO`|constante|Constante usada para indicar posiciones nulas|
+#### Operaciones
+
+>[!note] Nota
+>Precondición común (salvo `createEmptyListV`): la lista debe estar inicializada.
+
+| Operación                                        | Retorno      | Descripción                                                         |
+| ------------------------------------------------ | ------------ | ------------------------------------------------------------------- |
+| `createEmptyListV(tVideoList)`                   | `tVideoList` | Crea una lista vacía. PostCD: Lista inicializada y sin elementos.   |
+| `isEmptyListV(tVideoList)`                       | `bool`       | Determina si la lista está vacía.                                   |
+| `firstV(tVideoList)`                             | `tVideoPos`  | Devuelve la posición del primer vídeo. PreCD: lista no vacía.       |
+| `lastV(tVideoList)`                              | `tVideoPos`  | Devuelve la posición del último vídeo. PreCD: lista no vacía.       |
+| `nextV(tVideoPos, tVideoList)`                   | `tVideoPos`  | Devuelve el siguiente vídeo o `NULL_VIDEO`. PreCD: posición válida. |
+| `previousV(tVideoPos, tVideoList)`               | `tVideoPos`  | Devuelve el anterior vídeo o `NULL_VIDEO`. PreCD: posición válida.  |
+| `getItemV(tVideoPos, tVideoList)`                | `tVideoItem` | Devuelve el contenido del vídeo. PreCD: posición válida.            |
+| `updateItemV(tVideoItem, tVideoPos, tVideoList)` | `tVideoList` | Modifica el contenido del vídeo. PreCD: posición válida.            |
