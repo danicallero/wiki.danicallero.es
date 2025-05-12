@@ -26,7 +26,7 @@ typedef int tPosL;  //tipo de posición
 // Para lista estática:
 typedef struct {
     tItemL data[MAX]; //Array donde se almacena la información
-    tPosL lastPos;    //Última posición que almacena información útil
+    tPosL top;    //Última posición que almacena información útil
 } tList;
 ```
 
