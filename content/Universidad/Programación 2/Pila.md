@@ -13,6 +13,10 @@ aliases:
 ## 📌 Resumen del TAD Pila
 
 Una un *TAD* pila sigue el principio **LIFO** *Last in-First out*. En este tipo de estructura, el último elemento que se añade es el que ocupa una posición cima, y el primero en salir. Este *TAD* no permite acceder a ningún elemento más que al que ocupa la cima.
+
+>[!warning] ¿Es una variación del TAD [[Lista]]?  
+**No** es correcto decir que _una pila es una variación de una lista_, porque conceptualmente **la pila es un TAD independiente, con una abstracción propia**.  </br>
+No obstante, sí es cierto que un TAD Pila puede **implementarse** a partir del TAD Lista.
 ##### Ejemplos de pilas:
 - Una pila de platos:</br>
 ![[/images/plate_stack.jpeg|250]]

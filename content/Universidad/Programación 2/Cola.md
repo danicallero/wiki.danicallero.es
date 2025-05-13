@@ -19,6 +19,10 @@ Una cola contiene una secuencia de elementos $a_{o}$,$a_{1}$,$a_{2}$,…,$a_{n}
 - $a_{o}$ es el primer elemento insertado (frente).
 - $a_{n}$ es el último insertado (final).
 
+>[!warning] ¿Es una variación del TAD [[Lista]]?  
+**No** es correcto decir que _una cola es una variación de una lista_, porque conceptualmente **la cola es un TAD independiente, con una abstracción propia**.  </br>
+No obstante, sí es cierto que un TAD Cola puede **implementarse** a partir del TAD Lista.
+
 ---
 
 ## Clasificación de colas según implementación
