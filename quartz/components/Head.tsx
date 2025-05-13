@@ -97,6 +97,59 @@ export default (() => {
             return resource
           }
         })}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+      window.addEventListener("load", function () {
+        window.cookieconsent.initialise({
+          palette: {
+            popup: { background: "#000" },
+            button: { background: "#f1d600", text: "#000" }
+          },
+          theme: "classic",
+          revokable: false,
+          type: "opt-out",
+          content: {
+            message: "This website uses cookies for analytics purposes.",
+            allow: "Allow cookies",
+            deny: "Do not allow",
+            link: "", // No privacy policy link
+          },
+          onInitialise: function (status) {
+            if (this.hasConsented()) {
+              loadAnalytics();
+            }
+          },
+          onStatusChange: function (status) {
+            if (this.hasConsented()) {
+              loadAnalytics();
+            }
+          }
+        });
+
+        function loadAnalytics() {
+          var script = document.createElement("script");
+          script.src = "https://www.googletagmanager.com/gtag/js?id=G-3K1VSS7WFG";
+          script.async = true;
+          document.head.appendChild(script);
+
+          script.onload = function () {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag("js", new Date());
+            gtag("config", "G-3K1VSS7WFG");
+          };
+        }
+      });
+    `,
+          }}
+        ></script>
+
       </head>
     )
   }
