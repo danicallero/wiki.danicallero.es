@@ -12,7 +12,7 @@ aliases:
 
 ## 📌 Resumen del TAD Pila
 
-Una pila es una variación del *TAD* [[Lista]] que sigue el principio **LIFO** *Last in-First out*. En este tipo de estructura, el último elemento que se añade es el que ocupa una posición cima, y el primero en salir. Este *TAD* no permite acceder a ningún elemento más que al que ocupa la cima.
+Una un *TAD* pila sigue el principio **LIFO** *Last in-First out*. En este tipo de estructura, el último elemento que se añade es el que ocupa una posición cima, y el primero en salir. Este *TAD* no permite acceder a ningún elemento más que al que ocupa la cima.
 ##### Ejemplos de pilas:
 - Una pila de platos:</br>
 ![[/images/plate_stack.jpeg|250]]
@@ -83,3 +83,8 @@ bool isEmptyStack(tStack S);
 | -------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Estática       | Simplicidad y predictibilidad. | Tamaño fijo, requiere más memoria inicial, y se corre el riesgo de no poder insertar elementos al estar llena.                                       |
 | Dinámica       | Memoria dinámica y ampliable.  | No es posible el acceso directo, es necesario recorrer la lista para acceder a las diferentes posiciones. Riesgo de fragmentación o fuga de memoria. |
+## Enlaces de interés
+
+- [[Pilas Dinámicas]]
+- [[Pilas Estáticas]]
+- [[Lista]] (de donde derivan muchas implementaciones de pilas)
