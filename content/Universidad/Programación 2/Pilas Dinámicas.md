@@ -50,7 +50,7 @@ bool push(tItemS d, tStack *S){
     return false;
   else {
     node->data = d;
-    aux->down = *node;
+    node->down = *node;
     *S = node;
     return true;
   }

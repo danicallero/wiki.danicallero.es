@@ -9,6 +9,7 @@ tags:
 date: 2025-05-08
 aliases:
   - Cola con prioridad
+  - cola con prioridad
 ---
 Una **cola de prioridad** es una variación del TAD [[Cola]] en la que los elementos se agrupan por niveles de prioridad. Cada prioridad tiene su propia sub-cola FIFO, y los elementos con prioridad más alta se atienden antes que los de menor prioridad. Este tipo de estructura es ideal para ==aplicaciones como planificadores de procesos, gestión de recursos y simulaciones==.
 
