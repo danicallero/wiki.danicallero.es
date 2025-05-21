@@ -64,7 +64,7 @@ void pop(tStack *S){
   free(node);
 }
 
-tItemS peak(tStack S){
+tItemS peek(tStack S){
   return S->data;
 }
 
