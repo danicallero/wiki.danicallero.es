@@ -17,8 +17,8 @@ Una **pila estática** es un tipo de [[Pila]] que almacena elementos en un array
 ## Estructura de datos
 
 ```c
-#define LNULL -1    //posición nula
-#define MAX 10      //la lista tendrá 10 elementos [0-9]
+#define SNULL -1
+#define SMAX 10
 
 typedef ... tItemL; //tipo de elemento
 typedef int tPosL;  //tipo de posición
@@ -35,9 +35,6 @@ typedef struct {
 ## Implementación:
 
 ```c
-#define SNULL -1
-#define SMAX 10
-
  void createEmptyStack(tStack *S){  
     S->top = SNULL; //La pila se marca como vacía utilizando SNULL.  
 }  
