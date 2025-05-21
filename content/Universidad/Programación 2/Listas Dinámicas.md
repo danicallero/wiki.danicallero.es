@@ -23,7 +23,7 @@ En una lista simplemente enlazada:
 
 ```c
 #define LNULL NULL  //posición nula
-typedef ... tItemL; //tipo de elemento
+typedef ... tItemL; //item variará según lo que se pida
 typedef struct tNode *tPosL; //Se define tPosL como puntero a tNode.
   
 struct tNode{  

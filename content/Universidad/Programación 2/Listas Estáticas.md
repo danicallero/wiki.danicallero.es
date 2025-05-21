@@ -20,7 +20,7 @@ Una lista estática es un tipo de [[Lista]] que almacena elementos en un array c
 #define LNULL -1    //posición nula
 #define MAX 10      //la lista tendrá 10 elementos [0-9]
 
-typedef ... tItemL; //tipo de elemento
+typedef ... tItemL; //item variará según lo que se pida
 typedef int tPosL;  //tipo de posición
 
 // Para lista estática:

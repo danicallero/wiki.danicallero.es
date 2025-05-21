@@ -19,7 +19,7 @@ Una **pila dinámica** es un tipo de [[Pila]] que almacena elementos en espacios
 ```c
 #define SNULL NULL
  
-typedef int tItemS;
+typedef ... tItemS; //item variará según lo que se pida
 typedef struct tNodeS *tPosS;
  
 struct tNodeS{

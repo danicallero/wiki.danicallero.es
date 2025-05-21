@@ -18,67 +18,6 @@ Este tipo de cola es fácil de implementar y muy eficiente en tiempo, pero infle
 
 
 ---
-
-## Cola Estática Lineal
-
-### Diagrama
-
-```
-+----+----+----+----+----+
-| a1 | a2 | a3 |    |    |
-+----+----+----+----+----+
-  ^              ^
-front          rear
-```
-
-### Estructura
-
-```c
-#define QMAX 50
-#define QNULL -1
-
-typedef int tItemQ;
-
-typedef struct {
-    tItemQ data[QMAX];
-    int front;
-    int rear;
-} tQueue;
-```
-
-### Implementación
-
-```c
-void createEmptyQueue(tQueue *Q) {
-    Q->front = 0;
-    Q->rear = QNULL;
-}
-
-bool isEmptyQueue(tQueue Q) {
-    return Q.rear < Q.front;
-}
-
-bool enqueue(tItemQ item, tQueue *Q) {
-    if (Q->rear < QMAX - 1) {
-        Q->rear++;
-        Q->data[Q->rear] = item;
-        return true;
-    }
-    return false;
-}
-
-void dequeue(tQueue *Q) {
-    if (!isEmptyQueue(*Q)) {
-        Q->front++;
-    }
-}
-
-tItemQ front(tQueue Q) {
-    return Q.data[Q.front];
-}
-```
-
----
 ## Cola Estática Circular
 
 ### Diagrama circular
@@ -94,7 +33,7 @@ tItemQ front(tQueue Q) {
 ```c
 #define QMAX 10
 
-typedef int tItemQ;
+typedef ... tItemQ; //item variará según lo que se pida
 
 typedef struct {
     tItemQ data[QMAX];
@@ -128,6 +67,66 @@ bool enqueue(tItemQ item, tQueue *Q) {
 
 void dequeue(tQueue *Q) {
     Q->front = addOne(Q->front);
+}
+
+tItemQ front(tQueue Q) {
+    return Q.data[Q.front];
+}
+```
+
+---
+## Cola Estática Lineal
+
+### Diagrama
+
+```
++----+----+----+----+----+
+| a1 | a2 | a3 |    |    |
++----+----+----+----+----+
+  ^              ^
+front          rear
+```
+
+### Estructura
+
+```c
+#define QMAX 50
+#define QNULL -1
+
+typedef ... tItemQ; //item variará según lo que se pida
+
+typedef struct {
+    tItemQ data[QMAX];
+    int front;
+    int rear;
+} tQueue;
+```
+
+### Implementación
+
+```c
+void createEmptyQueue(tQueue *Q) {
+    Q->front = 0;
+    Q->rear = QNULL;
+}
+
+bool isEmptyQueue(tQueue Q) {
+    return Q.rear < Q.front;
+}
+
+bool enqueue(tItemQ item, tQueue *Q) {
+    if (Q->rear < QMAX - 1) {
+        Q->rear++;
+        Q->data[Q->rear] = item;
+        return true;
+    }
+    return false;
+}
+
+void dequeue(tQueue *Q) {
+    if (!isEmptyQueue(*Q)) {
+        Q->front++;
+    }
 }
 
 tItemQ front(tQueue Q) {

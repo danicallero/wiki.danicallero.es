@@ -29,7 +29,7 @@ front → [a1] → [a2] → [a3] → NULL
 ```c
 #define QNULL NULL
 
-typedef ... tItemQ;
+typedef ... tItemQ; //item variará según lo que se pida
 
 typedef struct tNodeQ *tPosQ;
 
