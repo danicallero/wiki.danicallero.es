@@ -35,13 +35,11 @@ typedef struct tNodeQ *tPosQ;
 
 struct tNodeQ {
     tItemQ item;
-    tPosQ next;
-};
-
-typedef struct {
     tPosQ front;
     tPosQ rear;
-} tQueue;
+};
+
+typedef tPosQ tQueue;
 ```
 
 ---
