@@ -29,17 +29,19 @@ front → [a1] → [a2] → [a3] → NULL
 ```c
 #define QNULL NULL
 
-typedef ... tItemQ; //item variará según lo que se pida
+typedef ... tItemQ;
 
 typedef struct tNodeQ *tPosQ;
 
 struct tNodeQ {
     tItemQ item;
-    tPosQ front;
-    tPosQ rear;
+    tPosQ next;
 };
 
-typedef tPosQ tQueue;
+typedef struct {
+    tPosQ front;
+    tPosQ rear;
+} tQueue;
 ```
 
 ---
