@@ -24,7 +24,7 @@ En este caso utilizaremos un [árbol AVL](Universidad/Programación-2/AVL). Nece
 
 En este caso utilizaremos *multilistas*. Una [[Listas Estáticas|lista estática]] inicial será la responsable de guardar la información correspondiente a cada una de las aulas; es estática porque las clases con las que contamos es una constante que conocemos antes de empezar a distribuir al alumnado. De cada elemento `clase` colgará otra [[Listas Estáticas|lista estática]] ordenada alfabéticamente, que guardará el listado de alumnos por aula; es estática porque debemos llenar la lista solo cuando quedan sitios libres.
 
->[!warning] Esta es mi forma de interpretar la pregunta, también se podría argumentar que la lista que cuelga debe ser dinámica porque desconocemos el número exacto de alumnos que se van a inscribir. No obstante, también se puede contraargumentar que el aforo de un aula, siendo realistas, difícilmente superará las 200 personas. La memoria que ahorra la implementación dinámica en caso de un aula con bajo aforo quedará opacada con la computación del atravesamiento necesario para contar el numero de alumnos guardados y evitar superar el aforo en cada inserción.
+>[!ojo] Esta es mi forma de interpretar la pregunta, también se podría argumentar que la lista que cuelga debe ser dinámica porque desconocemos el número exacto de alumnos que se van a inscribir. No obstante, también se puede contraargumentar que el aforo de un aula, siendo realistas, difícilmente superará las 200 personas. La memoria que ahorra la implementación dinámica en caso de un aula con bajo aforo quedará opacada con la computación del atravesamiento necesario para contar el numero de alumnos guardados y evitar superar el aforo en cada inserción.
 
 ---
 # Ejercicio 2 
