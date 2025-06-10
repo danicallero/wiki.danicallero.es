@@ -5,7 +5,7 @@ tags:
   - Informática-Básica
 date: 2025-06-10
 aliases: 
-draft: true
+draft: false
 ---
 ## Conceptos Básicos
 
@@ -250,8 +250,7 @@ Las direcciones MAC tienen una estructura plana que no permite jerarquía. Este 
       - 10.10.100.5 -\> Clase A, máscara 255.0.0.0 identificador 10.0.0.0.
       - 130.100.1.4 -\> Clase B, máscara 255.255.0.0 identificador 130.100.0.0.
 
------
-
+---
 ## Subnetting y máscaras de red
 
 Se introduce un tercer nivel en el espacio de direcciones IP. Los tres niveles de direccionamiento son:
@@ -269,16 +268,13 @@ La **máscara de subred** es una cadena de 32 bits , una serie de "unos" seguida
       - Resultado:
           - ID de red: `193.17.17.0`
           - ID de host: `.205`
-
       - Ejemplos de máscaras: 255.255.255.0 , 255.255.255.128 -\> Máscara/25 , 255.0.0.0.
       - Se usa para diferenciar la dirección de red de la dirección de host. Cuando se ponen los bits del host a 0, se calcula la dirección de red, y cuando se ponen a 1, la de broadcast.
 
 También se puede representar como: `193.17.17.205/24` (CIDR).
 
------
-
+---
 ## ARP: Address Resolution Protocol
-
 El protocolo **ARP** permite resolver direcciones IP a direcciones MAC dentro de una red local:
 1.  Un host envía un **ARP Request** por broadcast preguntando "¿quién tiene la IP X?"
 2.  El host con esa IP responde con un **ARP Reply** que incluye su MAC.
@@ -288,98 +284,59 @@ Si el destino está fuera de la red local, se solicita la MAC del **gateway pred
 
 ---
 ## DHCP: Asignación dinámica de IP
-
 El protocolo **DHCP** asigna dinámicamente direcciones IP y otros parámetros:
-
   - IP
   - Máscara de subred
   - Dirección del gateway
   - Servidor DNS
 
 **Funcionamiento:**
-
 1.  Descubrimiento (cliente → broadcast)
-
 2.  Oferta (servidor → cliente)
-
 3.  Solicitud (cliente → servidor)
-
 4.  Confirmación (ACK)
 
------
-
+---
 ## Direcciones IP especiales
-
   - **Privadas**:
-
       - Clase A: 10.0.0.0/8
-
       - Clase B: 172.16.0.0/12
-
       - Clase C: 192.168.0.0/16
-
   - **Loopback**: 127.0.0.1 (localhost)
-
   - **Enlace local (APIPA)**: 169.254.0.0/16 (autoasignadas cuando falla DHCP)
-
------
-
+  
+---
 ## NAT (Network Address Translation)
-
 **NAT** permite que múltiples dispositivos con IP privadas compartan una sola IP pública para acceder a Internet.
-
   - Traduce las IPs internas a una externa.
-
   - Guarda correspondencia en una tabla NAT.
-
   - Imprescindible por la escasez de direcciones IPv4.
 
------
-
+---
 ## IPv6
-
 Soluciona limitaciones de IPv4:
-
   - Espacio de direcciones mayor (128 bits)
-
   - Mejora de seguridad, movilidad y eficiencia del enrutamiento
-
   - No hay broadcast, solo unicast, multicast y anycast
-
   - Ejemplo: `2001:0db8:85a3:0000:0000:8a2e:0370:7334`
-
   - Representación simplificada: `2001:db8:85a3::8a2e:370:7334`
 
------
-
+---
 ## Transporte: TCP y UDP
-
 ### TCP (Transmission Control Protocol)
-
   - Orientado a conexión
-
   - Fiable, con control de errores
-
   - Ordena y confirma recepción de datos
-
 ### UDP (User Datagram Protocol)
-
   - No orientado a conexión
-
   - Más rápido, menos sobrecarga
-
   - Sin garantías de entrega
-
   - Usado en DNS, VoIP, streaming, juegos
 
------
-
+---
 ## Puertos y sockets
-
   - Un **puerto** identifica a cada servicio que corre sobre un host.
-
   - Combinación de IP + Puerto → **Socket**
-
   - Puerto + protocolo determina la aplicación
 
 |Tipo|Rango|Ejemplos|
@@ -388,26 +345,18 @@ Soluciona limitaciones de IPv4:
 |Registrados|1024 - 49151||
 |Dinámicos|49152 - 65535||
 
------
-
+---
 ## DNS: Sistema de nombres de dominio
-
-El sistema **DNS** traduce nombres de dominio legibles por humanos (como `www.google.com`) a direcciones IP.
-
+El sistema **DNS** traduce nombres de dominio legibles por humanos (como `www.google.com`, `wiki.danicallero.es`, `udconline.udc.gal`...) a direcciones IP.
   - Cliente consulta al **servidor DNS** configurado.
-
   - El servidor responde con la IP asociada al nombre.
 
 ### DNS públicos conocidos
-
   - Google: 8.8.8.8 / 8.8.4.4
-
   - Cloudflare: 1.1.1.1
-
   - OpenDNS: 208.67.222.222
 
------
-
+---
 ## Comparativa modelos OSI vs TCP/IP
 
 |Modelo OSI|Modelo TCP/IP|Ejemplos|
