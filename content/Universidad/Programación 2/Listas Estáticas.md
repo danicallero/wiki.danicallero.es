@@ -10,7 +10,7 @@ aliases:
   - lista estática
 ---
 
-Una lista estática es un tipo de [[Lista]] que almacena elementos en un array con una posición fija. Este tipo de lista es ideal para manipular posiciones, buscar elementos y acceder a posiciones arbitrarias rápidamente. Sin embargo, no es óptimo en aplicaciones donde el tamaño de la muestra del elemento que se va a almacenar es desconocido o donde no se puede reservar espacio que no se utilizará; para estas aplicaciones véase *[[Listas Dinámicas]]*.
+Una lista estática es un tipo de [[Lista]] que almacena elementos en un array con un tamaño fijo. Este tipo de lista es ideal para manipular posiciones, buscar elementos y acceder a posiciones arbitrarias rápidamente. Sin embargo, no es óptimo en aplicaciones donde el tamaño de la muestra del elemento que se va a almacenar es desconocido o donde no se puede reservar espacio que no se utilizará; para estas aplicaciones véase *[[Listas Dinámicas]]*.
 
 ---
 
