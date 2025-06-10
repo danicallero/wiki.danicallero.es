@@ -26,20 +26,20 @@ draft: false
 **Objetivo principal**: Proporcionar información para la toma de decisiones
 ### Tipos de contabilidad
 #### Contabilidad de Gestión, Interna o Analítica
-Esta rama del sistema contable genera **información interna** con las siguientes características:
+Esta rama del sistema contable genera **información interna** con las siguientes características:
 - **No es obligatoria por ley**: La empresa decide qué información generar según sus necesidades.
 - **Es información privada**: Solo para uso interno de la organización.
 - **Formato adaptado**: Se diseña específicamente para las necesidades particulares de cada empresa.
 - **Periodicidad flexible**: Se produce con la frecuencia que requiera la empresa (diaria, semanal, mensual, etc.)
-Esta información está dirigida al **decisor interno** (gerentes, directivos, jefes de departamento) para apoyar decisiones operativas, tácticas y estratégicas.
+Esta información está dirigida al **decisor interno** (gerentes, directivos, jefes de departamento) para apoyar decisiones operativas, tácticas y estratégicas.
 #### Contabilidad Financiera o Externa
-Esta rama produce **información externa** con estas características:
+Esta rama produce **información externa** con estas características:
 - **Es obligatoria por ley**: Las empresas deben cumplir con normativas contables y fiscales.
 - **Es información pública**: Disponible para usuarios externos interesados.
 - **Formato obligatorio**: Debe seguir estándares contables establecidos.
 - **Periodicidad mínima**: Al menos una vez al año, aunque puede ser trimestral o semestral según regulaciones.
 
-Esta información está dirigida al **decisor externo** (inversionistas, bancos, proveedores, autoridades fiscales, público en general) para evaluar la situación financiera y tomar decisiones sobre la empresa.
+Esta información está dirigida al **decisor externo** (inversionistas, bancos, proveedores, autoridades fiscales, público en general) para evaluar la situación financiera y tomar decisiones sobre la empresa.
 
 ---
 ## II. Contabilidad financiera
