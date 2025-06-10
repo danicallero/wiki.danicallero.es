@@ -216,7 +216,7 @@ El Álgebra Relacional es un lenguaje de consulta formal y procedimental. Opera 
 7. **Renombrado (ρ)**:
     
     - Permite cambiar el nombre de una relación o de sus atributos.
-    - Símbolo: $\rho_{\text{nuevo_nombre(nuevos_atributos)}}(R)$
+    - Símbolo: $$\rho_{\text{nuevo\_nombre(nuevos\_atributos)}}(R)$$
     - **Ejemplo**: Renombrar la tabla `Estudiantes` a `Alumnos` y sus atributos. ρAlumnos(ID, NombreCompleto)​(Estudiantes)
 
 #### Operadores Derivados
