@@ -99,7 +99,7 @@ Cada capa se comunica con su equivalente en el dispositivo remoto y con las capa
 
 ### Medios de transmisión 
 
-Medios de transmisión incluyen: Cable Coaxial - RG58 , Cable de cobre de par trenzado - RJ45 , y Fibra Óptica.
+Medios de transmisión incluyen: Cable Coaxial - RG58 , Cable de cobre de par trenzado - RJ45 , y Fibra Óptica.</br>
 ![[Redes_transmision.png|550]]
 ![[Redes_transmision2.png|550]]
 
