@@ -1,5 +1,5 @@
 ---
-title: Representación de la información
+title: B1. Representación de la información
 tags:
   - Universidad
   - Informática-Básica
