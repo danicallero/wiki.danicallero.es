@@ -196,7 +196,7 @@ Ethernet Standard (IEEE 802.3) garantiza la compatibilidad de los dispositivos e
   - Estos paquetes son recibidos y procesados por todos los dispositivos en una red.
   - Este tráfico es necesario para administrar la red y su flujo, por lo tanto, no puede ser eliminado.
   - El número de dispositivos en una red es proporcional a la cantidad de tráfico broadcast en la misma. Más dispositivos implican más tráfico de broadcast que afecta al rendimiento de la red en general y de los dispositivos en particular.
-  - Conclusión: Es necesario mantener el tamaño de los dominios de broadcast tan pequeño como se pueda.
+  - Es necesario mantener el tamaño de los dominios de broadcast tan pequeño como se pueda.
 ### VLANs
   - Una **VLAN (Virtual LAN)** permite segmentar lógicamente una red sin importar su distribución física.
   - Mejora el rendimiento y la seguridad al reducir el dominio de broadcast.
@@ -296,6 +296,8 @@ El protocolo **DHCP** asigna dinámicamente direcciones IP y otros parámetros:
 3.  Solicitud (cliente → servidor)
 4.  Confirmación (ACK)
 
+El servidor debe estar en la misma red LAN que el cliente que realiza el DHCP request, a no ser que exista otro agente que sirva como intermediario –[DHCP relay](https://learn.microsoft.com/en-us/windows-server/networking/technologies/dhcp/dhcp-deploy-relay-agent)– que propague la llamada a otras LANs.
+
 ---
 ## Direcciones IP especiales
   - **Privadas**:
@@ -304,6 +306,19 @@ El protocolo **DHCP** asigna dinámicamente direcciones IP y otros parámetros:
       - Clase C: 192.168.0.0/16
   - **Loopback**: 127.0.0.1 (localhost)
   - **Enlace local (APIPA)**: 169.254.0.0/16 (autoasignadas cuando falla DHCP)
+- Dirección IP de broadcast
+
+- Es una **dirección IP especial** usada para enviar un paquete a **todos los dispositivos dentro de una misma subred IP**.
+	- Ejemplo (subred /24):
+	    IP: `192.168.1.0/24`
+        Broadcast IP: `192.168.1.255`
+        Significa: "envía esto a todos los dispositivos de la red 192.168.1.x"
+        
+>[!ojo] Relacionado con:
+>Dirección MAC de broadcast
+>- Es: `FF:FF:FF:FF:FF:FF`
+>- Significa: "envía esto a **todas** las interfaces de red conectadas directamente (capa 2)"
+>- No depende de subred IP. Es solo para comunicación **local** en el mismo segmento Ethernet.
   
 ---
 ## NAT (Network Address Translation)
