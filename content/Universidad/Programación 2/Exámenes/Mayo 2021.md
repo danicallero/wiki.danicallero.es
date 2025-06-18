@@ -7,7 +7,8 @@ tags:
 date: 2025-05-11
 draft: false
 ---
----
+>[!warning] ¡Cuidado!
+>Estos ejercicios no han pasado ninguna corrección oficial, y no prometo que estén bien. Si encuentras algún error no dudes en comunicármelo: hola@danicallero.es
 # Ejercicio 1
 
 **Dados los siguientes supuestos prácticos decidir: (1) cuál es la MEJOR estructura de datos, y (2) su MEJOR implementación para resolver el problema (para ser considerada correcta, AMBAS respuestas deberán estar justificadas): (1,5 pts.)**

@@ -5,7 +5,8 @@ tags:
   - Universidad
 date: 2025-05-10
 ---
-
+>[!warning] ¡Cuidado!
+>Estos ejercicios no han pasado ninguna corrección oficial, y no prometo que estén bien. Si encuentras algún error no dudes en comunicármelo: hola@danicallero.es
 Este documento recopila **ejercicios prácticos paso a paso** de **inserción y eliminación en [[ABB]]** y **rotaciones en AVL**, con diagramas y explicaciones.
 
 ---

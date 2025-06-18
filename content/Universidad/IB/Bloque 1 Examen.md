@@ -7,6 +7,8 @@ date: 2025-06-10
 aliases: 
 draft: false
 ---
+>[!warning] ¡Cuidado!
+>Estos ejercicios los he hecho con mi –poco– conocimiento, y no prometo que estén bien. Si encuentras algún error no dudes en comunicármelo: hola@danicallero.es
 # 1 (1.5 pts.)
 **1.1)** El número $AB{.}CD_b$ puede representarse en base 10 como:</br>
 **a)** $A \cdot b^2 + B \cdot b^1 + C \cdot b^{-1} + D \cdot b^{-2}$</br>
