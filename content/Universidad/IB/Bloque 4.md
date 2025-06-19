@@ -106,7 +106,7 @@ Medios de transmisión incluyen: Cable Coaxial - RG58 , Cable de cobre de par tr
 ### Tarjeta de red (*NIC*) –*Network Interface Card*
 La **tarjeta de red (NIC - Network Interface Card)** está directamente conectada al ordenador y proporciona un punto de conexión a la red. Facilita la conexión física al medio de transmisión, que puede ser cableado o inalámbrico.
 
-La NIC es el dispositivo responsable de crear y recibir la información en forma de señales adecuadas para llegar al siguiente dispositivo. Las NICs envían y reciben datos binarios mediante impulsos eléctricos, pulsos luminosos u ondas de radio. Opera principalmente en el **Nivel Físico** del modelo OSI y parte del **Nivel de Enlace de Datos**.
+La NIC es el dispositivo responsable de crear y recibir la información en forma de señales adecuadas para llegar al siguiente dispositivo. Las NICs envían y reciben datos binarios mediante impulsos eléctricos, pulsos luminosos u ondas de radio. Opera principalmente en el ==**Nivel Físico**== del modelo OSI y parte del ==**Nivel de Enlace de Datos**==.
 
 En el Nivel Físico, **acepta tramas de la capa de enlace** y las codifica como una serie de señales (impulsos eléctricos, pulsos luminosos u ondas de radio) que se transmiten por el medio.
   - **Codificación**: convierte los bits en un formato reconocible por el receptor.
@@ -123,7 +123,6 @@ La **capa de enlace de datos** del modelo OSI se encarga de establecer y mantene
   - Identificación mediante direcciones MAC.
 
 Cada trama contiene:
-
   - Cabecera: dirección MAC origen y destino, tipo de protocolo, control de flujo...
   - Datos: la carga útil que transporta.
   - Cola: campos de control, como el CRC (Cyclic Redundancy Check).
@@ -131,7 +130,7 @@ Cada trama contiene:
 ---
 #### Dirección MAC (Media Access Control) 
 
-Cada NIC tiene un identificador único que se conoce como Dirección MAC Address (Media Access Control). Las direcciones MAC son identificadores compuestos por 48 bits que se escriben en notación hexadecimal. Se utilizan para identificar de forma exclusiva a cada dispositivo dentro de una red local.
+Cada **NIC** tiene un identificador único que se conoce como Dirección MAC Address (Media Access Control). Las direcciones MAC son identificadores compuestos por **48 bits** que se escriben en notación *hexadecimal*. Se utilizan para identificar de forma exclusiva a cada dispositivo dentro de una red local.
   - Ejemplo: `00-03-FF-F9-0F-63`.
   - La dirección se divide en dos partes:
       - **OUI (Organizationally Unique Identifier)**: identifica al fabricante.
@@ -160,18 +159,18 @@ El campo CRC permite verificar que la información no se ha corrompido en el cam
 Ethernet Standard (IEEE 802.3) garantiza la compatibilidad de los dispositivos en una red. Las tarjetas de red Ethernet utilizan un método de control de acceso al medio conocido como **CSMA/CD** (*Carrier Sense Multiple Access / Collision Detection*). Los dispositivos en la red respetan su turno para hablar, pues si uno quiere transmitir debe escuchar el medio hasta que no haya otro transmitiendo. A veces ocurren colisiones aún siendo muy cuidadosos y es necesario detectarlas.
 
 **Tipos de Ethernet:** 
-  - **Legacy Ethernet**: Es la implementación más antigua de Ethernet, centrada en resolver los problemas causados por el cable coaxial. Una estación pone 1 trama en el cable y las demás reciben el mismo mensaje. Cada estación se queda solo con las tramas que la tienen a ella misma como destinataria.
-      - El "dominio de colisión" (D de C) es el conjunto de dispositivos que comparten un medio físico para transmitir y, por tanto, compiten por él.
-      - Dispositivos intermedios como el repetidor de red permiten superar las restricciones físicas establecidas por la atenuación de la señal en el medio.
-      - Hub o repetidor multipuerto: Repite y concentra las señales de tráfico de una red. Recibe datos por un puerto y lo reenvía y regenera en el resto de puertos.
-      - Problemas sin resolver con repetidores/hubs: NO procesan datos, solo regeneran y sincronizan la señal. Ancho de banda compartido y colisiones.
+  - **Legacy Ethernet**: Es la implementación más antigua de Ethernet, centrada en resolver los problemas causados por el cable coaxial. Una estación pone 1 trama en el cable y las demás reciben el mismo mensaje. **Cada estación se queda solo con las tramas que la tienen a ella misma como destinataria**.
+      - El "**dominio de colisión**" (D de C) es el conjunto de dispositivos que comparten un medio físico para transmitir y, por tanto, compiten por él.
+      - Dispositivos intermedios como el **repetidor** de red permiten superar las restricciones físicas establecidas por la atenuación de la señal en el medio.
+      - **Hub o repetidor multipuerto**: Repite y concentra las señales de tráfico de una red. Recibe datos por un puerto y lo reenvía y regenera en el resto de puertos.
+      - Problemas sin resolver con repetidores/hubs: **NO procesan datos**, solo regeneran y sincronizan la señal. Ancho de banda compartido y colisiones.
       - Solución: Creación de múltiples dominios de colisión mediante dispositivos de red más avanzados como Bridges y Switches.
   - **Ethernet conmutado (Switching)**: introduce switches para segmentar la red, reducir colisiones y aumentar el rendimiento.
 
 ---
 ##### Switches y Bridges
 ###### Bridge
-  - Dispositivo que interconecta redes y toma decisiones acerca del reenvío de las tramas. Para ello, utiliza las direcciones MAC como fuente de información.
+  - Dispositivo que ==interconecta redes== y toma decisiones acerca del reenvío de las tramas. Para ello, utiliza las direcciones **MAC** como fuente de información.
   - Mantienen una tabla de direcciones que asocia una MAC de destino con el puerto físico donde se encuentra (**Content-Addressable Memory Table, CAM Table**). Este proceso permite al bridge redirigir los datos solo al puerto físico donde encontrará al destinatario (esta es la principal diferencia con el HUB). Se crean, por tanto, múltiples dominios de colisión (1 por cada puerto).
   - **Funcionamiento**:
     1.  **Actualizar la tabla de direcciones MAC**: Cuando se recibe una trama en un puerto físico del bridge, se crea una nueva entrada en la tabla. Esa nueva entrada asocia la MAC del origen con el número de puerto por el que se recibió. Así, el bridge sabrá el puerto en el que está ubicado si recibe una trama con destino a ese dispositivo. El bridge elimina de la tabla una MAC si no está activa durante un periodo limitado de tiempo (habitualmente en torno a 300 segundos).
@@ -184,11 +183,11 @@ Ethernet Standard (IEEE 802.3) garantiza la compatibilidad de los dispositivos e
   - **Solución**: Switches.
 ###### Switch
   - Un conmutador o switch es un dispositivo que interconecta redes de manera similar a como lo hace un bridge, pero es más rápido. Utiliza una Tabla CAM (Content-Addressable Memory).
-  - Principal diferencia: los switches realizan sus funciones (aprendizaje de direcciones, selección de puertos y conmutación de tramas) mediante hardware, mientras que los bridges las realizan mediante software.
+  - Principal diferencia: los switches ==realizan sus funciones== (aprendizaje de direcciones, selección de puertos y conmutación de tramas) ==mediante hardware==, mientras que los bridges las realizan mediante software.
   - Los switches son los dispositivos más habituales en la capa de acceso de las redes corporativas.
-  - Los switches suelen tener una densidad de puertos mayor que los bridges.
+  - Los switches suelen tener una **densidad de puertos mayor que los bridges**.
   - El escenario más habitual en una LAN actualmente es hosts conectados a un switch, con un único host por puerto.
-  - Admite conexiones full-duplex.
+  ![[IB_switch.png]]
 
 **Paquetes de difusión / Broadcast**
   - Muchas de las tecnologías de acceso múltiple, como, por ejemplo, Ethernet, tienen algunos paquetes/tramas especiales denominados de difusión o broadcast.
@@ -205,11 +204,11 @@ Ethernet Standard (IEEE 802.3) garantiza la compatibilidad de los dispositivos e
 
 ## Modelo de direccionamiento IP
 ### IP: Internet Protocol
-Las direcciones MAC tienen una estructura plana que no permite jerarquía. Este hecho tiene como problema que las direcciones MAC no son escalables. Se necesita algo para unificar las tecnologías subyacentes (Ethernet, ADSL, PPP, ...). Se necesita definir un protocolo en la capa de red.
+Las direcciones MAC tienen una estructura plana que no permite jerarquía. Este hecho tiene como problema que las direcciones MAC no son escalables. Se necesita algo para unificar las tecnologías subyacentes (Ethernet, ADSL, PPP, ...). Se necesita definir un protocolo en la ==capa de red==.
 
   - Direcciones IP: Secuencias de 32 bits que identifican un dispositivo conectado a una red de forma no ambigua.
   - Jerarquía en las direcciones: Formadas por dos partes.
-      - Un ID de la red lógica (Dominio de difusión).
+      - Un ID de la red lógica (**Dominio de difusión**).
       - Un ID del host dentro de la red lógica.
   - Habitualmente se escriben en formato decimal separado por punto.
 
@@ -222,6 +221,7 @@ Las direcciones MAC tienen una estructura plana que no permite jerarquía. Este 
   - Las direcciones IP están compuestas por dos partes: ID de red e ID de host.
   - Todos los dispositivos de una red tienen el mismo ID de red.
   - Para diferenciar los hosts en una red lógica se utiliza el ID de host o dirección local.
+![[IB_IDred.png|400]]
 
 **Interconexión**
   - Las LANs se organizan en redes más grandes, donde los routers son necesarios para administrar la comunicación entre ellas.

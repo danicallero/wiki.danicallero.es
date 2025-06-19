@@ -134,39 +134,3 @@ a)** 00:10:BA:E4:FE:82</br>
 **b)** 2 dominios de colisión y 2 de difusión.</br>
 **c)** 3 dominios de colisión y 5 de difusión. </br>
 **d)** 5 dominios de colisión y 3 de difusión. $\checkmark$
-
-**X)** </br>
-**a)** </br>
-**b)** </br>
-**c)** </br>
-**d)** </br>
-
-**X)** </br>
-**a)** </br>
-**b)** </br>
-**c)** </br>
-**d)** </br>
-
-**X)** </br>
-**a)** </br>
-**b)** </br>
-**c)** </br>
-**d)** </br>
-
-**X)** </br>
-**a)** </br>
-**b)** </br>
-**c)** </br>
-**d)** </br>
-
-**X)** </br>
-**a)** </br>
-**b)** </br>
-**c)** </br>
-**d)** </br>
-
-**X)** </br>
-**a)** </br>
-**b)** </br>
-**c)** </br>
-**d)** </br>
