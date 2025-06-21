@@ -203,8 +203,8 @@ Salida esperada:
 ## Estructura del proyecto
 
 - [[main|main.c]]: Entrada principal, lógica de procesamiento de los comandos.
-- [[console_list|console_list.c/.h]]: Definición e implementación de la [[Listas Dinámicas|lista dinámica]].
-- [[bid_stack|bid_stack.c/.h]]: Definición e implementación de la [[Pilas Estáticas|pila estática]] de pujas.
+- [[console_list|console_list.c-.h]]: Definición e implementación de la [[Listas Dinámicas|lista dinámica]].
+- [[bid_stack|bid_stack.c-.h]]: Definición e implementación de la [[Pilas Estáticas|pila estática]] de pujas.
 - [[types|types.c]]: Definición de tipos.
 
 ## Compilación y Ejecución
