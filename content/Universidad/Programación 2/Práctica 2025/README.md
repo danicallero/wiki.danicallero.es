@@ -1,17 +1,23 @@
 ---
-title: Práctica 2025
+title: README
 tags:
   - Programación-2
   - Universidad
   - Prácticas
 date: 2025-06-21
-draft: true
+draft: false
 ---
 # Plataforma de Subastas de Consolas
 
-Este proyecto forma parte del curso de Programación II del Grado en Ingeniería Informática en la Universidade da Coruña (UDC). Consiste en la implementación de un sistema de gestión de subastas de consolas retro, combinando estructuras dinámicas y estáticas de datos.
+Este proyecto forma parte de la programación de la asignatura Programación II del Grado en Ingeniería Informática en la Universidade da Coruña (UDC) en el curso 2024-2025. Consiste en la implementación de un sistema de gestión de subastas de consolas retro, combinando estructuras dinámicas y estáticas de datos.
 
 El sistema permite registrar consolas, gestionar pujas, adjudicar ventas y generar estadísticas a partir de la información almacenada.
+
+>[!warning] ¡Ojo con el plagio!
+>Este proyecto se comparte con el propósito de ayudar a otros a estudiantes a entender los contenidos de la materia, y para que tengan una idea de cómo se ve una práctica que está aprobada (no está perfecta).</br>
+>Usar fragmentos de este código –o cualquier otro– en una entrega propia es considerado **fraude académico**, y conllevará el suspenso de la asignatura ==las DOS convocatorias==. [Normativa UDC](https://www.udc.es/es/normativa/academica/)</br>
+>Los profesores del departamento no nacieron ayer, evidentemente utilizan software como [MOSS](https://theory.stanford.edu/~aiken/moss/) para detectar plagio entre compañeros, y muy probablemente algún tipo de detección de IA ¡No te la juegues! </br>
+>Por favor, usa este contenido de forma responsable.
 
 ## Funcionalidad principal
 
@@ -194,25 +200,57 @@ Salida esperada:
 * InvalidateBids: console console5 seller seller5 brand sega price 120.00 bids 6 average bids 2.50
 ```
 
----
+## Estructura del proyecto
 
-# Estructura del proyecto
+- [[main|main.c]]: Entrada principal, lógica de procesamiento de los comandos.
+- [[console_list|console_list.c/.h]]: Definición e implementación de la [[Listas Dinámicas|lista dinámica]].
+- [[bid_stack|bid_stack.c/.h]]: Definición e implementación de la [[Pilas Estáticas|pila estática]] de pujas.
+- [[types|types.c]]: Definición de tipos.
 
-- **main.c**: Entrada principal, lógica de procesamiento de los comandos.
-- **console_list.c/.h**: Definición e implementación de la [[Listas Dinámicas|lista dinámica]].
-- **bid_stack.c/.h**: Definición e implementación de la [[Pilas Estáticas|pila estática]] de pujas.
-- **types.c**: Definición de tipos.
+## Compilación y Ejecución
 
-# Consideraciones
+Para la compilación de la práctica, se recomienda usar el compilador **gcc**, que es el que se usará para la corrección.
 
-- El tamaño máximo de la pila está limitado por SMAX.
+``` shell
+gcc bid_stack.c console_list.c main.c -o main
+```
+
+Además, es recomendable añadir `-Wall` y `-Wextra` para mostrar errores en el código que no impiden la compilación.
+
+```shell
+gcc -Wall -Wextra bid_stack.c console_list.c main.c -o main
+```
+
+Para ejecutar el programa con un fichero de comandos, ejecuta en la terminal el siguiente comando:
+
+```shell
+./main <archivo.txt>
+```
+
+Al ejecutar el archivo se mostrará en la terminal el resultado de la ejecución del código.
+## Consideraciones
+
+- El tamaño máximo de la pila está limitado por `SMAX`.
 - Algunas validaciones están intencionalmente omitidas para ceñirse al enfoque de programación contractual exigido por la asignatura (por ejemplo, punteros nulos o inválidos no tratados en el TAD).
 - La eliminación de nodos en el TAD sigue el método de aliasing por exigencia del profesorado de la asignatura.
+
+## Consejos
+
+>[!attention] ¡Cuidado!
+>Ten en cuenta que si el script de prueba script_test.sh proporcionado por el profesorado no produce un "Ok" para todos los checkpoint previos a la entrega, y un "Ok" para los casos de prueba proporcionados, la práctica se evaluará con un cero.
+
+>[!ojo] ¡Ojo!
+>Que los casos de prueba básicos proporcionados den "Ok" no significa que la práctica esté bien. Es muy importante realizar otras pruebas como overflows de listas, parámetros negativos, intentos de violación de precondiciones...
 
 # Autoría
 
 Daniel Callero Costales – hola@danicallero.es
 
+# GitHub
+
+Puedes descargar la práctica completa en [este](https://github.com/danicallero/pro2-2025-P2) enlace.
+
+---
 <div align="center">
   Made with ❤️ & C by Daniel Callero
 </div>
