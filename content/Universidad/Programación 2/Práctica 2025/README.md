@@ -237,10 +237,13 @@ Al ejecutar el archivo se mostrará en la terminal el resultado de la ejecución
 ## Consejos
 
 >[!attention] ¡Cuidado!
->Ten en cuenta que si el script de prueba script_test.sh proporcionado por el profesorado no produce un "Ok" para todos los checkpoint previos a la entrega, y un "Ok" para los casos de prueba proporcionados, la práctica se evaluará con un cero.
+>Ten en cuenta que si el script de prueba script.sh proporcionado por el profesorado no produce un "Ok" para todos los checkpoint previos a la entrega, y un "Ok" para los casos de prueba proporcionados, la práctica se evaluará con un cero.
 
 >[!ojo] ¡Ojo!
->Que los casos de prueba básicos proporcionados den "Ok" no significa que la práctica esté bien. Es muy importante realizar otras pruebas como overflows de listas, parámetros negativos, intentos de violación de precondiciones...
+>Que los casos de prueba básicos proporcionados den "Ok" no significa que la práctica esté bien. Es muy importante realizar otras pruebas como overflows de listas, parámetros negativos, intentos de violación de precondiciones... </br></br>Por cualquier tontería te van a bajar nota. A mi me bajaron casi tres puntos en la P2 porque se me coló un print donde no iba: 
+    <div align="center">
+       <img src="Tontería_pro2.png" width="300">
+    </div>
 
 # Autoría
 
