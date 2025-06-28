@@ -1,5 +1,5 @@
 ---
-title: README
+title: Práctica 2025
 tags:
   - Programación-2
   - Universidad
@@ -29,7 +29,7 @@ El sistema permite registrar consolas, gestionar pujas, adjudicar ventas y gener
 ## Estructuras de datos
 
 - **Lista dinámica ordenada (`tList`)**: Almacena las consolas activas, ordenadas alfabéticamente por su identificador.
-- [[Pilas Estáticas|Pila estática]] (`tStack`)**: Mantiene el historial de pujas de cada consola individualmente.
+- [[Pilas Estáticas|Pila estática]] (`tStack`): Mantiene el historial de pujas de cada consola individualmente.
 
 ## Comandos soportados
 
@@ -313,6 +313,7 @@ dani@MacBook-Pro-Dani P2 %
     <div align="center">
        <img src="Tontería_pro2.png" width="300">
     </div>
+
 # Autoría
 
 Daniel Callero Costales – hola@danicallero.es
@@ -325,3 +326,5 @@ Puedes descargar la práctica completa en [este](https://github.com/danicallero/
 <div align="center">
   Made with ❤️ & C by Daniel Callero
 </div>
+
+---

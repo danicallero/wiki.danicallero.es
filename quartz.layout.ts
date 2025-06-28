@@ -10,6 +10,8 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       GitHub: "https://github.com/danicallero",
       Instagram: "https://instagram.com/danicallero",
+      LinkedIn: "https://linkedin.com/in/daniel-callero-costales-807252270",
+      Mail: "mailto:hola@danicallero.es",
     },
   }),
 }
@@ -67,5 +69,6 @@ export const defaultListPageLayout: PageLayout = {
   ],
   right: [
     Component.Graph(),
+    Component.DesktopOnly(Component.TableOfContents()),
   ],
 }

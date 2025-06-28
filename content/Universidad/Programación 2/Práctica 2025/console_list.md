@@ -5,7 +5,7 @@ tags:
   - Universidad
   - Prácticas
 date: 2025-06-21
-draft: true
+draft: false
 ---
 # Especificación
 ```c
@@ -13,6 +13,7 @@ draft: true
  * @file console_list.h
  * @brief Gestión del TAD Lista dinámica ordenada de consolas.
  * @date 25/03/2025
+ * @author Daniel Callero Costales hola@danicallero.es
  *
  * @note Proyecto compartido con fines educativos. Se desaconseja la entrega propia o con fines de plagio.
  */
@@ -195,6 +196,7 @@ tPosL findItem(tConsoleId id, tList L);
  * @file console_list.c
  * @brief Gestión del TAD Lista dinámica ordenada de consolas.
  * @date 25/03/2025
+ * @author Daniel Callero Costales hola@danicallero.es
  *
  * @note Proyecto compartido con fines educativos. Se desaconseja la entrega propia o con fines de plagio.
  */

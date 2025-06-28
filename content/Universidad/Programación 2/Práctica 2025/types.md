@@ -5,7 +5,7 @@ tags:
   - Universidad
   - Prácticas
 date: 2025-06-21
-draft: true
+draft: false
 ---
 ```c
 #ifndef PRO2_2025_P2_TYPES_H

@@ -5,7 +5,7 @@ tags:
   - Administración-y-Gestión-de-Organizaciones
 date: 2025-06-10
 aliases: 
-draft: false
+draft: true
 ---
 # El subsistema de información contable. Teoría.
 ## I. Concepto y funciones del sistema de información contable

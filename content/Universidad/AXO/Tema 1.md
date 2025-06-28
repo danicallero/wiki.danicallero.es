@@ -5,7 +5,7 @@ tags:
   - Administración-y-Gestión-de-Organizaciones
 date: 2025-06-10
 aliases: 
-draft: false
+draft: true
 ---
 # La empresa y el empresario en la sociedad actual
 
