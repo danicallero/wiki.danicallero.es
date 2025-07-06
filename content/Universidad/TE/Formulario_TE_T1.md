@@ -18,7 +18,7 @@ draft: false
 - **Corriente eléctrica**: flujo de carga por una superficie:
 
 $$
-I = \frac{dQ}{dt} \qquad [A].
+I = \frac{\mathrm{d}Q}{\mathrm{d}t} \qquad [A].
 $$
 
 - Sentido convencional: flujo de carga positiva.
@@ -153,7 +153,7 @@ $$
 ---
 
 ## 7. Resumen de fórmulas clave
-- $I = \frac{dQ}{dt}$
+- $I = \frac{\mathrm{d}Q}{\mathrm{d}t}$
 - $V = I \cdot R$
 - $P = V \cdot I = I^2 R = \frac{V^2}{R}$
 - $R = \rho \cdot \frac{\ell}{S}$

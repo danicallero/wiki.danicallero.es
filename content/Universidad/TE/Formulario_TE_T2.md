@@ -53,11 +53,11 @@ $$
 - Pico a pico: $X_{pp} = X_{ps} - X_{pi}$  
 - Valor medio:
   $$
-  X_{dc} = \frac{1}{T} \int_0^T x(t) dt
+  X_{dc} = \frac{1}{T} \int_0^T x(t)\;\mathrm{d}t
   $$
 - Valor eficaz (RMS):
   $$
-  X_{ef} = \sqrt{\frac{1}{T} \int_0^T x^2(t)\, dt}
+  X_{ef} = \sqrt{\frac{1}{T} \int_0^T x^2(t)\, \mathrm{d}t}
   $$
 
 ---
@@ -106,11 +106,11 @@ $$
   $$
 - Corriente:
   $$
-  i(t) = \frac{dq(t)}{dt}\quad [A].
+  i(t) = \frac{\mathrm{d}q(t)}{\mathrm{d}t}\quad [A].
   $$
 - Si $i(t)$ es conocida:
   $$
-  v_C(t)= \frac{q(t)}{C}\implies v_C(t) = \frac{1}{C} \int_0^t i(\tau) d\tau\quad [V].
+  v_C(t)= \frac{q(t)}{C}\implies v_C(t) = \frac{1}{C} \int_0^t i(\tau) \mathrm{d}\tau\quad [V].
   $$
 
 >[!ojo] ¿Sabías que?
@@ -126,7 +126,7 @@ $$
 
 Sustituyendo:
 $$
-i(t) = C \frac{dv_C(t)}{dt} \Rightarrow V = RC \frac{dv_C(t)}{dt} + v_C(t)
+i(t) = C \frac{\mathrm{d}v_C(t)}{\mathrm{d}t} \Rightarrow V = RC \frac{\mathrm{d}v_C(t)}{\mathrm{d}t} + v_C(t)
 $$
 >[!ojo] ¿Sabías que?
 >La tensión en la resistencia se obtiene con: $v_R(t)+v_C(t)=0\implies v_R(t)=-v_C(t)$. 
