@@ -44,6 +44,13 @@
     --callout-icon: var(--callout-icon-note);
   }
 
+  &[data-callout="tldr"] {
+    --color: #7a43b5;
+    --border: #7a43b544;
+    --bg: #7a43b510;
+    --callout-icon: var(--callout-icon-abstract);
+  }
+
   &[data-callout="abstract"] {
     --color: #00b0ff;
     --border: #00b0ff44;

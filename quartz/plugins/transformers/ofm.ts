@@ -62,7 +62,6 @@ const calloutMapping = {
   note: "note",
   abstract: "abstract",
   summary: "abstract",
-  tldr: "abstract",
   info: "info",
   todo: "todo",
   tip: "tip",
