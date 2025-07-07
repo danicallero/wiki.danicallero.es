@@ -10,12 +10,12 @@ aliases:
   - pila
 ---
 ## Definición
-
-Una pila es un *TAD* que gestiona las inserciones, consultas y eliminaciones de datos siguiendo el principio **LIFO** *Last in-First out*. En este tipo de estructura, el último elemento que se añade es el que ocupa una posición cima, y el primero en salir. Este *TAD* no permite acceder a ningún elemento más que al que ocupa la cima.
+Una **pila** es una estructura de datos lineal que gestiona las inserciones, consultas y eliminaciones de datos siguiendo el principio **LIFO** *Last in-First out*. En este tipo de estructura, el último elemento que se añade es el que ocupa una posición cima, y el primero en salir. Este *TAD* no permite acceder a ningún elemento más que al que ocupa la cima.
 
 >[!warning] ¿Es una variación del TAD [[Lista]]?  
-**No** es correcto decir que _una pila es una variación de una lista_, porque conceptualmente **la pila es un TAD independiente, con una abstracción propia**.  </br>
-No obstante, sí es cierto que un TAD Pila puede **implementarse** a partir del TAD Lista.
+>**No** es correcto decir que _una pila es una variación de una lista_, porque conceptualmente **la pila es un TAD independiente, con una abstracción propia**.  </br>
+>No obstante, sí es cierto que un TAD Pila puede **implementarse** a partir del TAD Lista.
+
 ##### Ejemplos de pilas en la vida real
 - Una pila de platos:</br>
 ![[images/plate_stack.jpeg|250]]
@@ -35,8 +35,47 @@ La implementación de un *TAD* pila depende de cómo se almacenen sus elementos 
 
 La estructura de datos variará según se usen [[Pilas Estáticas]] o [[Pilas Dinámicas]].
 
+
 ---
-## Especificación:
+## Especificación informal de una Pila
+- Generadoras
+	- createEmptyStack -> Stack
+		- Objetivo: Crea una pila vacía.
+		- Salida: Una pila vacía.
+		- Postcondición: La pila queda inicializada y vacía.
+	- push(Item, Stack) -> Stack, Bool
+		- Objetivo: Inserta un elemento en la pila, que queda en la cima.
+		- Entrada:
+			- Item: Elemento a insertar.
+			- Stack: Pila a la que se le aplicará la operación.
+		- Salida:
+			- Stack: Pila con el elemento insertado.
+			- Bool: True/False dependiendo de si la operación se ha realizado con éxito.
+- Destructoras:
+	- pop(Stack) -> Stack
+		- Objetivo: Elimina el elemento de la cima de la pila.
+		- Entrada:
+			- Stack: Pila a la que se le aplicará la operación.
+		- Salida:
+			- Stack: Pila sin el elemento de la cima.
+		- Precondición: La pila no está vacía.
+- Observadoras:
+	- peek(Stack) -> Item
+		- Objetivo: Recupera el contenido de la cima de la pila.
+		- Entrada:
+			- Stack: Pila a la que se le aplicará la operación.
+		- Salida:
+			- Item: El elemento recuperado de la cima de la pila.
+		- Precondición: La pila no está vacía.
+	- isEmptyStack(Stack) -> Bool
+		- Objetivo: Determina si una pila está vacía o no.
+		- Entrada:
+			- Stack: Pila a la que se le aplicará la operación.
+		- Salida:
+			- True/False dependiendo si la pila está vacía o no.
+
+---
+## Cabecera (stack.h):
 
 ```c  
 /**  

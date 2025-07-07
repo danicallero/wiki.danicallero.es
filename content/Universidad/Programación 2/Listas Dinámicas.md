@@ -54,6 +54,9 @@ Las listas *doblemente enlazadas* permiten recorridos en ambos sentidos y facili
 ---
 ## Implementación no ordenada:
 
+>[!bug] ¡Método poco ortodoxo!
+>En `deleteAtPosition` se utiliza un método llamado aliasing: copia del contenido del siguiente nodo, enlace al siguiente del siguiente y liberación el nodo copiado (el siguiente al nodo pasado). Esto rompe la abstracción del TAD y puede dejar punteros colgando, porque lo que realmente se libera es el nodo posterior al que queremos borrar. No lo haría así porque me parece una catetada que puede ser muy problemática, pero como me bajaron nota por hacer una eliminación limpia obteniendo el nodo previo, lo dejo como "le gusta al departamento".
+
 ```c
  void createEmptyList(tList *L) {  
     *L = LNULL; 

@@ -37,6 +37,12 @@ Una ***Lista*** es una estructura de datos que almacena una secuencia de cero 
 		- Postcondición: Las posiciones de los elementos posteriores al insertado cambian si no se insertó al final.
 - Modificadoras:
 	- copyList($List_1$) -> $List_2$, Bool
+		- Objetivo: Copia una lista en otra.
+		- Entrada:
+			- $List_1$: Lista que se quiere copiar.
+		- Salida:
+			- $List_2$: Copia de la lista original.
+			- True/False dependiendo de si la operación fue realizada con éxito o no.
 	- updateItem(Item, Position, List) -> List
 		- Objetivo: Modifica el contenido de un elemento de la lista
 		- Entrada:
@@ -48,15 +54,73 @@ Una ***Lista*** es una estructura de datos que almacena una secuencia de cero 
 		- Precondición: Position es una posición válida de la lista.
 - Destructoras:
 	- deleteAtPosition(Position, List) -> List
+		- Objetivo: Elimina de la lista el elemento que ocupa la posición `Position`.
+		- Entrada:
+			- Position: La posición cuyo elemento se eliminará.
+			- List: Lista sobre la que se aplicará la operación.
+		- Salida:
+			- List: Lista que ya no contiene el elemento anteriormente almacenado en `Position`.
+		- Precondición: Position es una posición válida de la lista.
+		- Postcondition: Las posiciones de los elementos de la lista pueden haber variado.
 	- deleteList(List) -> List
+		- Objetivo: Elimina todos los elementos contenidos en una lista.
+		- Entrada:
+			- List: Lista sobre la que se aplica la operación.
+		- Salida:
+			- Lista vacía.
 - Observadoras:
 	- findItem(Item, List) -> Position
+		- Objetivo: Busca la primera ocurrencia de un elemento con cierto contenido en la lista.
+		- Entrada:
+			- Item: Contenido/critério de búsqueda.
+			- List: Lista sobre la que se realiza la operación.
+		- Salida:
+			- Position: Posición del primer elemento encontrado que encaje con el criterio de búsqueda, o nulo si no se encuentra ninguno.
 	- isEmptyList(List) -> Bool
+		- Objetivo: Determina si una lista está vacía o no.
+		- Entrada:
+			- List: Lista a la que se le aplicará la operación.
+		- Salida:
+			- True/False dependiendo si la lista está vacía o no.
 	- getItem(Position, List) -> Item
+		- Objetivo: Recupera el contenido almacenado en una posición de la lista.
+		- Entrada:
+			- Position: Posición del elemento buscado.
+			- List: Lista sobre la que se aplica la operación.
+		- Salida:
+			- Item: Contenidos almacenados en la posición `Position`.
+		- Precondición:
+			- Position es una posición válida y ocupada de la lista.
 	- first(List) -> Position
+		- Objetivo: Devuelve la posición del primer elemento de la lista.
+		- Entrada:
+			- List: Lista sobre la que se aplica la operación.
+		- Salida:
+			- Position: Posición del primer elemento de la lista.
+		- Precondición: La lista no está vacía.
 	- last(List) -> Position
+		- Objetivo: Devuelve la posición del último elemento de la lista.
+		- Entrada:
+			- List: Lista sobre la que se aplica la operación.
+		- Salida:
+			- Position: Posición del último elemento de la lista.
+		- Precondición: La lista no está vacía.
 	- previous(Position, List) -> Position
-	- first(Position, List) -> Position
+		- Objetivo: Devuelve la posición inmediatamente anterior a la posición `Position` pasada.
+		- Entrada:
+			- Position: Posición de referencia.
+			- List: Lista sobre la que se aplica la operación.
+		- Salida:
+			- Position: Posición anterior a la proporcionada.
+		- Precondición: Position es una posición válida en la lista.
+	- next(Position, List) -> Position
+		- Objetivo: Devuelve la posición inmediatamente posterior a la posición `Position` pasada.
+		- Entrada:
+			- Position: Posición de referencia.
+			- List: Lista sobre la que se aplica la operación.
+		- Salida:
+			- Position: Posición siguiente a la proporcionada.
+		- Precondición: Position es una posición válida en la lista.
 
 ---
 ## Tipos de implementación
@@ -74,7 +138,7 @@ Dependiendo de la aplicación de la lista, podemos distinguir entre **listas ord
 La estructura de datos variará según se usen [[Listas Estáticas]] o [[Listas Dinámicas]].
 
 ---
-## Cabecera (lista.h)
+## Cabecera (list.h)
 
 ```c
 //Generadoras
