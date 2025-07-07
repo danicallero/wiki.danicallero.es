@@ -1,5 +1,5 @@
 ---
-title: Pilas Dinámicas
+title: 5.2 Pilas Dinámicas
 tags:
   - Programación-2
   - Implementaciones

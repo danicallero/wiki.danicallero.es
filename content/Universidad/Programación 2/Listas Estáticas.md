@@ -1,5 +1,5 @@
 ---
-title: Listas Estáticas
+title: 3.1 Listas Estáticas
 tags:
   - Programación-2
   - Implementaciones
@@ -9,12 +9,16 @@ date: 2025-05-08
 aliases:
   - lista estática
 ---
-
-Una lista estática es un tipo de [[Lista]] que almacena elementos en un array con un tamaño fijo. Este tipo de lista es ideal para manipular posiciones, buscar elementos y acceder a posiciones arbitrarias rápidamente. Sin embargo, no es óptimo en aplicaciones donde el tamaño de la muestra del elemento que se va a almacenar es desconocido o donde no se puede reservar espacio que no se utilizará; para estas aplicaciones véase *[[Listas Dinámicas]]*.
+## Definición
+Una lista estática es un tipo de [[Lista]] que almacena elementos en un array con un tamaño fijo, que se define en el momento de su creación. Este tipo de lista es ideal para manipular posiciones, buscar elementos y acceder a posiciones arbitrarias rápidamente, ya que permite acceso directo a los elementos en tiempo constante ($O(1)$). Sin embargo, no es óptimo en aplicaciones donde el tamaño de la muestra del elemento que se va a almacenar es desconocido o donde no se puede reservar espacio que no se utilizará; para estas aplicaciones es preferible usar *[[Listas Dinámicas]]*, que permiten una gestión más flexible de la memoria.
 
 ---
-
 ## Estructura de datos
+
+```plaintext
+[a1,a2,a3,a4...,an]
+lastpos = x
+```
 
 ```c
 #define LNULL -1    //posición nula
@@ -31,7 +35,6 @@ typedef struct {
 ```
 
 ---
-
 ## Implementación no ordenada:
 
 ```c

@@ -1,5 +1,5 @@
 ---
-title: Listas Dinámicas
+title: 3.2 Listas Dinámicas
 tags:
   - Programación-2
   - Implementaciones
@@ -9,11 +9,13 @@ date: 2025-05-08
 aliases:
   - lista dinámica
 ---
+## Definición
+Una lista dinámica es un tipo de [[Lista]] que almacena elementos en espacios de memoria no contigua enlazados llamados **nodos**. Este tipo de lista es ideal para ==aplicaciones en las que el número de elementos no se conoce de antemano==, ya puede almacenar elementos hasta agotar la memoria de la máquina. Sin embargo, esta implementación no permite el acceso directo a elementos en posiciones arbitrarias. Para acceder a un elemento en mitad de la lista, es necesario atravesarla desde el principio o desde el final, si se trata de una *lista doblemente enlazada*. Por lo tanto, las operaciones como la *eliminación, el acceso al elemento previo o al último* son poco eficientes, se manejan mejor en las *[[Listas Estáticas]]*.
 
-Una lista dinámica es un tipo de [[Lista]] que almacena elementos en espacios de memoria enlazados llamados **nodos**. Este tipo de lista es ideal para ==aplicaciones en las que el número de elementos es desconocido==, ya que su capacidad máxima de elementos es esencialmente ilimitada (dentro de las limitaciones de memoria de la máquina). Sin embargo, esta implementación no permite el acceso directo a elementos en posiciones arbitrarias. Para acceder a un elemento en mitad de la lista, es necesario atravesarla desde el principio o desde el final, si se trata de una *lista doblemente enlazada*. Por lo tanto, las operaciones como la *eliminación, el acceso al elemento previo o al último* son poco eficientes en las listas dinámicas y se manejan mejor en las *[[Listas Estáticas]]*.
+>[!warning] Integridad
+>Al trabajar con listas dinámicas, es fundamental mantener la integridad de la estructura. Errores como dejar punteros colgantes, perder la referencia a nodos sin liberar su memoria, o acceder a memoria no inicializada pueden provocar fugas de memoria o corrupción del programa. Asegúrate siempre de gestionar correctamente la asignación y liberación de memoria.
 
 ---
-
 ## Estructura de datos
 
 En una lista simplemente enlazada:
@@ -50,7 +52,6 @@ struct tNode{
 Las listas *doblemente enlazadas* permiten recorridos en ambos sentidos y facilitan las *inserciones/eliminaciones* en el medio. Como inconveniente ocupan más espacio en la memoria al tener que reservar espacio para dos punteros en cada nodo.
 
 ---
-
 ## Implementación no ordenada:
 
 ```c
@@ -164,6 +165,7 @@ tPosL next(tPosL p, tList L) {
 }
 ```
 
+---
 ## Implementación ordenada:
 
 ```c

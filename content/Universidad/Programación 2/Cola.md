@@ -1,5 +1,5 @@
 ---
-title: Colas
+title: 4. TAD Cola
 tags:
   - Programación-2
   - Tipos-de-datos

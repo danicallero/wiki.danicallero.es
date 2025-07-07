@@ -1,5 +1,5 @@
 ---
-title: Pilas Estáticas
+title: 5.1 Pilas Estáticas
 tags:
   - Programación-2
   - Implementaciones

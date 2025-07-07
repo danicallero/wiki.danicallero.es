@@ -1,5 +1,5 @@
 ---
-title: Colas Dinámicas
+title: 4.2 Colas Dinámicas
 tags:
   - Programación-2
   - Tipos-de-datos
@@ -9,6 +9,7 @@ date: 2025-05-08
 aliases:
   - cola dinámica
 ---
+## Definición
 Una **cola dinámica** es una implementación del TAD [[Cola]] que almacena los elementos en una estructura enlazada mediante nodos en memoria dinámica. Esto permite que el tamaño de la cola crezca o disminuya según sea necesario, lo que la hace ideal para aplicaciones con cargas variables o indefinidas.
 
 Aunque ofrece gran flexibilidad, requiere una gestión correcta de memoria (reservar/liberar) y es más compleja de implementar correctamente que su versión estática.

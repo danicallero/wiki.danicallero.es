@@ -1,5 +1,5 @@
 ---
-title: Colas de Prioridad
+title: 4.3 Colas de Prioridad
 tags:
   - Programación-2
   - Tipos-de-datos
@@ -12,12 +12,12 @@ aliases:
   - cola con prioridad
 draft: false
 ---
+# Definición
 Una **cola de prioridad** es una variación del TAD [[Cola]] en la que los elementos se agrupan por niveles de prioridad. Cada prioridad tiene su propia sub-cola FIFO, y los elementos con prioridad más alta se atienden antes que los de menor prioridad. Este tipo de estructura es ideal para ==aplicaciones como planificadores de procesos, gestión de recursos y simulaciones==.
 
-Según como se implemente, la cola de prioridad puede ser [dinámica](Universidad/Programacion-2/Cola-de-Prioridad#Estructura-Dinamica), [estática](Universidad/Programacion-2/Cola-de-Prioridad#Estructura-Estatica) o [mixta](Universidad/Programacion-2/Cola-de-Prioridad#Cola-de-prioridad-mixta).
+Según como se implemente, la cola de prioridad puede ser [dinámica](Universidad/Programación-2/Cola-de-Prioridad#estructura-dinámica), [estática](Universidad/Programación-2/Cola-de-Prioridad#estructura-estática) o [mixta](Universidad/Programación-2/Cola-de-Prioridad#cola-de-prioridad-mixta).
 
 ---
-
 # Diagrama de estructura común
 
 ```
@@ -30,7 +30,6 @@ tQueueP → [prio:3] → [prio:2] → [prio:1]
 Cada prioridad mantiene una cola FIFO independiente.
 
 ---
-
 # Estructura Dinámica
 
 ```c
@@ -117,7 +116,6 @@ bool isEmptyQueueP(tQueueP queueP) {
 ```
 
 ---
-
 # Estructura Estática
 
 ```c
@@ -195,7 +193,6 @@ bool isEmptyQueueP(tQueueP queueP) {
 ```
 
 ---
-
 # Comparativa Dinámica vs Estática
 
 |Característica|Dinámica|Estática|
@@ -208,7 +205,6 @@ bool isEmptyQueueP(tQueueP queueP) {
 |Ideal para|Sistemas grandes, escalables|Sistemas embebidos, recursos fijos|
 
 ---
-
 # Cola de prioridad mixta
 
 Una **cola de prioridad mixta** combina prioridades fijas (estáticas) con subcolas implementadas dinámicamente mediante listas enlazadas. Este enfoque es eficiente cuando el número de prioridades es conocido de antemano, pero se requiere flexibilidad en la cantidad de elementos por prioridad.
@@ -238,8 +234,6 @@ typedef struct {
 } tQueueP;
 ```
 
----
-
 ## Especificación del TAD Cola de Prioridad Mixta
 
 ```c
@@ -249,8 +243,6 @@ void dequeueP(tQueueP *queueP);
 tItemQ frontP(tQueueP queueP);
 bool isEmptyQueueP(tQueueP queueP);
 ```
-
----
 
 ## Implementación
 
