@@ -8,9 +8,9 @@ tags:
 date: 2025-05-08
 ---
 ## Definición
-Una ***Lista*** es una estructura de datos que almacena una secuencia de cero o más elementos de un mismo tipo, ordenados de manera lineal por su posición.
+Una ***Lista*** es una estructura de datos que almacena una secuencia de cero o más elementos de un mismo tipo, ordenados de manera lineal por su posición.
 
-- Si n=0, la lista está vacía.
+- Si n=0, la lista está vacía.
 - Cada elemento tiene una posición única en la lista.
 
 ```

@@ -10,7 +10,7 @@ aliases:
   - Cola Estática
 ---
 ## Definición
-Una **cola estática** es una implementación del TAD [[Cola]] que utiliza un array de tamaño fijo para almacenar sus elementos. Es ideal para ==situaciones donde se conoce de antemano el número máximo de elementos==, como simuladores, colas de impresión y gestión de recursos limitados.
+Una  **cola estática**  es una implementación del TAD [[Cola]] que utiliza un array de tamaño fijo para almacenar sus elementos. Es ideal para ==situaciones donde se conoce de antemano el número máximo de elementos==, como simuladores, colas de impresión y gestión de recursos limitados.
 
 Este tipo de cola es fácil de implementar y muy eficiente en tiempo, pero inflexible en cuanto al tamaño: si se llena, no puede crecer dinámicamente, y si se vacía parcialmente, puede dejar espacio no utilizable. Puede implementarse como
 

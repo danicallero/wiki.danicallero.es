@@ -15,12 +15,12 @@ Si ya estás familiarizado con estructuras como arrays, Programación II te llev
 - **Abstracción y TAD**: entender estructuras como conceptos independientes de su [implementación](tags/Implementaciones).
 - **[[Lista|Listas]]**: simples, dobles, ordenadas, multilistas...
 - **[[Pila|Pilas]] y [[Cola|colas]]**: sus variantes, implementaciones y usos.
-- **[[Universidad/Programación-2/Árboles-binarios|Árboles]]**: desde los binarios básicos hasta los árboles AVL (más equilibrados y eficientes).
+- **[[Universidad/Programación-2/Árboles-binarios|Árboles]]**: desde los binarios básicos hasta los árboles AVL.
 
 Además de verlo desde la teoría, la mayoría de estos conceptos también se implementarán en lenguajes como **C**.
 
 >[!ojo] ¡Ojo!
->Aunque la asignatura sea de formación básica, nadie te va a explicar las bases de C, cómo abordar un proyecto desde cero, cómo usar un sistema de control de versiones o qué se consideran buenas (o malas) prácticas.
+>Aunque la asignatura sea de "formación básica", nadie te va a explicar las bases de C, cómo abordar un proyecto desde cero, cómo usar un sistema de control de versiones o qué se consideran buenas (o malas) prácticas.
 >
 ></br>La asignatura implica un salto importante respecto a Programación I. Muchos estudiantes que llegaron a la facultad sin haber escrito una línea de código en su vida aún están aterrizando conceptos básicos como qué es una función o cómo organizar un programa más allá del `main`, y en Pro 2 se espera que –sin ninguna explicación– entiendan de primeras la relación entre programas dentro de un repositorio.
 

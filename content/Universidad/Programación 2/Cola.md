@@ -11,12 +11,12 @@ aliases:
 ---
 ## Definición
 
-Una **cola** es una estructura de datos lineal que sigue la política **FIFO** (_First In, First Out_), en la que los elementos se insertan por un extremo (final) y se eliminan por el otro (frente). Es muy útil en problemas donde los elementos deben procesarse en orden de llegada, como en la planificación de tareas, impresión, redes, simulaciones o sistemas operativos.
+Una **cola** es una estructura de datos lineal que sigue la política **FIFO** (_First In, First Out_), en la que los elementos se insertan por un extremo (final) y se eliminan por el otro (frente). Es muy útil en problemas donde los elementos deben procesarse en orden de llegada, como en la planificación de tareas, impresión, redes, simulaciones o sistemas operativos.
 
-Una cola contiene una secuencia de elementos $a_{o}$,$a_{1}$,$a_{2}$,…,$a_{n}$ tal que:
+Una cola contiene una secuencia de elementos $a_{o}$,$a_{1}$,$a_{2}$,…,$a_{n}$ tal que:
 
-- $a_{o}$ es el primer elemento insertado (frente).
-- $a_{n}$ es el último insertado (final).
+- $a_{o}$ es el primer elemento insertado (frente).
+- $a_{n}$ es el último insertado (final).
 
 >[!warning] ¿Es una variación del TAD [[Lista]]?  
 >**No** es correcto decir que _una cola es una variación de una lista_, porque conceptualmente **la cola es un TAD independiente, con una abstracción propia**.  </br>

@@ -7,7 +7,7 @@ Hi, I'm Dani ;)
 
 I'm also aboard the digital garden frenzy ship, so welcome to my site!
 
-To be honest, this website was born partly as a way to share with my peers my [programación 2](tags\Programación-2) notes, but mainly as a way to procrastinate on my studying 🤐, and I was totally prepared to pull the plug right after the exam; however, being a self-proclaimed nerd, it's no surprise that I've really liked the idea of organizing my notes like I’m building a second brain.
+To be honest, this website was born partly as a way to share with my peers my [programación 2](Universidad\Programación-2) notes, but mainly as a way to procrastinate on my studying 🤐, and I was totally prepared to pull the plug right after the exam; however, being a self-proclaimed nerd, it's no surprise that I've really liked the idea of organizing my notes like I’m building a second brain.
 
 I've always loved computers and everything revolving them, and so I ended up studying Computer Science at A Coruña's University; and, even though I've come through some raw edges –Discrete Maths, I'm looking to you–, I'm really enjoying the journey.
 
